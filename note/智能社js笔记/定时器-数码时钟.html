@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数码时钟</title>
+<style>
+*{padding: 0;margin: 0;list-style: none;}
+body{background-color: black;color: white;font-size: 200px;font-family: "Microsoft YaHei";font-weight: bold;}
+li{display: inline-block;}
+</style>
+</head>
+<body>
+<script>
+window.onload=function()
+{
+	var toDou=function(n)
+	{
+		if(n<10)
+		{
+			return "0"+n;
+		}else{
+			return ""+n;
+		}
+	}
+	var oLi=document.getElementsByTagName("li");
+
+	function tick()
+	{
+		var oDate=new Date();
+		var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+		for(var i=0;i<oLi.length;i++)
+		{
+			// oLi[i].innerHTML=str[i];	// str[i] 不兼容低版本浏览器（如：IE7）
+			oLi[i].innerHTML=str.charAt(i);
+		};
+	};
+	tick();
+	setInterval(tick,1000);
+};
+</script>
+<ul id="div1"><li></li><li></li>:<li></li><li></li>:<li></li><li></li></ul>
+</body>
+</html>

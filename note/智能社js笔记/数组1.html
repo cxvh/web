@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+<script>
+window.onload=function()
+{
+	// 数组两种写法
+
+	var a=[0,1,2,3,4,5];
+	// var a=new Array(1,2,3,4,5);
+
+	a.length=3; 	// 可以快速清除第三个后面的内容
+	alert(a);		// 0,1,2
+
+	var arr=[0,1,2,3,4,5];
+	// 数组删除
+	arr.shift();	// 从头部删除；
+	arr.pop();		// 从尾部删除；
+	// 数组添加
+	arr.unshift(99);// 从头部添加；
+	arr.push(66);	// 从尾部添加；
+	alert(arr);		// 99,1,2,3,4,66
+
+	var arr=[0,1,2,3,4,5,6];
+	// 删除：splice（起点，长度）
+	arr.splice(2,3);
+	alert(arr);	// 0,1,5,6
+
+	var arr=[0,1,2,3,4,5,6];
+	// 插入：splice（起点，长度，元素）
+	arr.splice(2,0,"a","ab","abc","abcd");
+	alert(arr);	// 0,1,"a","ab","abc","abcd",2,3,4,5,6
+
+	var arr=[0,1,2,3,4,5,6];
+	// 替换：splice（起点，长度，元素）
+	arr.splice(2,2,"aa","bb");
+	alert(arr);	// 0,1,"aa","bb",4,5,6
+
+
+	// 数组链接
+	var a=[1,2,3];
+	var b=[4,5,6];
+	alert(a.concat(b));	// 1,2,3,4,5,6
+	alert(b.concat(a));	// 4,5,6,1,2,3
+
+	// 数组拼接
+	var arr=[1,2,3,4];
+	alert(arr.join(""));	// 1234
+	alert(arr.join("---"));	// 1---2---3---4
+	alert(arr.join("q-3-5-gt"));	// 1q-3-5-gt2q-3-5-gt3q-3-5-gt4
+
+
+	// 数组排序
+
+
+	/* 字符串排序 */
+	var arr=["float","width","alpha","zoom","left"];
+	arr.sort();
+	alert(arr);	// 根据首字母 a-z 排序
+
+	/* 数字排序1 */
+	var arr=[12,8,99,19,112];
+	arr.sort();
+	alert(arr);	//结果是：112,12,19,8,99
+	// 112	排序特点，按照字母排序的，个十百。
+	// 12
+	// 19
+	// 8
+	// 9
+	/* 数字排序2 */
+	var arr=[12,8,99,19,112];
+	arr.sort(function(n1,n2){
+		if(n1<n2)	// n1-n2;是负数
+		{
+			return -1;	// 可以是任意负数
+		}
+		else if(n1>n2)	// n1-n2;是正数
+		{
+			return 1;	// 可以是任意正数
+		}
+		else
+		{
+			return 0;
+		}
+		/****** 上面的简写  ******/
+		/*
+		return n1-n2;	// 结果可以是正数，负数，零。
+		*/
+	});
+	alert(arr);
+};
+</script>
+<div id="div1"></div>
+</body>
+</html>

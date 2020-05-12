@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 基础</title>
+<style>
+</style>
+<script>
+window.onload=function()
+{
+	var oOl=document.getElementById("oOl1");
+
+/********** 1.1.使用 childNodes 获取子节点 **********
+
+	// childNodes 兼容 IE6-IE8，只计算元素节点 显示2
+	// childNodes 其他主流浏览器计算时，算有文本节点和元素节点 显示5
+	// alert(oOl.childNodes.length); 显示5
+	for(var i=0;i<oOl.childNodes.length;i++)
+	{
+		// nodeType==3 -->是文本节点
+		// nodeType==1 -->是元素节点
+		if(oOl.childNodes[i].nodeType==1)
+		{
+			oOl.childNodes[i].style.backgroundColor="red";
+		}
+	};
+*******************************************************/
+/********** 1.2.使用 children 获取子节点 **********
+
+	//	alert(oOl.children.length); 2个子节点，说明兼容性非常好
+	for(var i=0;i<oOl.children.length;i++)
+	{
+		oOl.children[i].style.backgroundColor="orange";
+	};
+*******************************************************/
+
+/********** 2.1.使用 parentNode 获取父节点 **********/
+	var aA=document.getElementsByTagName("a");
+	for(var i=0;i<aA.length;i++)
+	{
+		aA[i].onclick=function()
+		{
+			this.parentNode.style.display="none";
+		}
+	};
+
+};
+</script>
+</head>
+<body>
+<ol id="oOl1">
+	<li></li>
+	<li></li>
+</ol>
+<ol id="oOl2">
+	<li>wqe<a href="javascript:;">隐藏</a></li>
+	<li>sdfsf<a href="javascript:;">隐藏</a></li>
+	<li>cbvc<a href="javascript:;">隐藏</a></li>
+	<li>yutr<a href="javascript:;">隐藏</a></li>
+	<li>lghjdg<a href="javascript:;">隐藏</a></li>
+</ol>
+</body>
+</html>

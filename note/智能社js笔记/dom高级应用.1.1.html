@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 操作应用--文档碎片</title>
+<style>
+a{font-size: 18px;color: blue;text-decoration: underline;}
+a:hover{color: orange;}
+a:active{color:yellow;}
+a:visited{color:red;}
+ul,li{margin-left:50px;padding-left: 100px;}
+</style>	
+<script>
+window.onload=function()
+{
+	// 表格应用 - 1
+	// 获取:tBodies、tHead、tFoot、rows、cells
+	// 
+
+	var oTab=document.getElementById("tab1");
+
+	// alert(oTab.getElementsByTagName("tbody")[0].getElementsByTagName("tr")[1].getElementsByTagName("td")[1].innerHTML);	普通获取方法
+	// alert(oTab.tBodies[0].rows[1].cells[1].innerHTML)	表格专有获取方法
+
+	// 1.隔行变色
+
+	var oldColor="";
+	for(var i=0;i<oTab.tBodies[0].rows.length;i++)
+	{
+		oTab.tBodies[0].rows[i].onmouseover=function()
+		{
+			oldColor=this.style.backgroundColor;
+			this.style.backgroundColor="rgba(240,240,240,.8)";
+		}
+		oTab.tBodies[0].rows[i].onmouseout=function()
+		{
+			this.style.backgroundColor=oldColor;
+		}
+		if(i%2)
+		{
+			oTab.tBodies[0].rows[i].style.backgroundColor="";
+		}
+		else
+		{
+			oTab.tBodies[0].rows[i].style.backgroundColor="#ccc";
+		}
+	}
+
+	// 2.添加表格
+
+	var oName=document.getElementById("name");
+	var oAge=document.getElementById("age");
+	var oBtn=document.getElementById("btn1");
+
+	var id=oTab.tBodies[0].rows.length+1;
+
+	oBtn.onclick=function()
+	{
+		var oTr=document.createElement("tr");
+
+		var oTd=document.createElement("td");
+		oTd.innerHTML=id;
+		oTr.appendChild(oTd);
+
+		var oTd=document.createElement("td");
+		oTd.innerHTML=oName.value;
+		oTr.appendChild(oTd);
+
+		var oTd=document.createElement("td");
+		oTd.innerHTML=oAge.value;
+		oTr.appendChild(oTd);
+
+		var oTd=document.createElement("td");
+		oTd.innerHTML='<a href="javascript:;">删除</a>';
+		oTr.appendChild(oTd);
+
+		oTd.getElementsByTagName("a")[0].onclick=function()
+		{
+			oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+		};
+
+		oTab.tBodies[0].appendChild(oTr);
+	}
+};
+</script>
+</head>
+<body>
+姓名：<input type="text" id="name">
+年龄：<input type="text" id="age">
+<input type="button" value="添 加" id="btn1">
+<hr>
+<table id="tab1" border="2px" width="500px">
+	<thead>
+		<td>Id</td>
+		<td>姓名</td>
+		<td>年龄</td>
+		<td>操作</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Blue</td>
+			<td>27</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>张三</td>
+			<td>23</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>李四</td>
+			<td>28</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>王五</td>
+			<td>25</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>张伟</td>
+			<td>24</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,812 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<title>国微政府网</title>
+<!--引入css-->
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<!--引入js-->
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js" ></script>
+<script type="text/javascript" src="js/zx.js" ></script>
+</head>
+
+<body>
+<!--容器居中-->
+<div class="container">
+  <div class="header">
+    <ul class="header_l">
+      <li><a href="neirong.html">中华人民共和国人社部</a></li>
+      <li><a href="neirong.html">省人社厅</a></li>
+      <li><a href="neirong.html">市政府网站</a></li>
+    </ul>
+    <div class="header_r"> <a href="javascript:void(0);" onclick="SetHome(this,'http://www.2010100.com');">设为首页</a> <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a> </div>
+  </div>
+  <div class="clear"></div>
+  <div class="logo">
+    <embed src="flash/logo.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1005" height="190"></embed>
+  </div>
+  <div class="clear"></div>
+  <div class="nav">
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="zuzhijg.html">组织机构</a></li>
+      <li><a href="xinwengg.html">新闻公告</a></li>
+      <li><a href="xinxigk.html">信息公开</a></li>
+      <li><a href="video_pic.html">视频图片</a></li>
+      <li><a href="zhengcefg.html">政策法规</a></li>
+      <li><a href="banshizn.html">办事指南</a></li>
+      <li><a href="xinxixt.html">信息系统</a></li>
+      <li><a href="lingdaoxx.html">政民互动</a></li>
+      <li class="nav_search">
+        <form action="#" target="_blank" method="get" name="form1" id="form1">
+          <input type="text" value="" class="nav_search_text" >
+          <input type="submit" value="搜  索" class="nav_search_sub">
+        </form>
+      </li>
+    </ul>
+    <div class="menu2bg">
+      <ol class="menu2_ul_block1">
+        <li class="menu2_date"> 
+          <script type="text/javascript">
+print(today.getFullYear()+"年"+mon+"月"+today.getDate()+"日&nbsp;&nbsp;&nbsp;"+d[today.getDay()+1]);</script> 
+        </li>
+        <li class="menu2_gdxw">
+        	<b>>>&nbsp;&nbsp;&nbsp;滚动新闻</b>
+          <div id="scrollDiv">
+			<div class="scrollText">
+          <ul>
+            <li><i>▪&nbsp;</i><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>05-15</span></li>
+            <li><i>▪&nbsp;</i><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>05-15</span></li>
+            <li><i>▪&nbsp;</i><a href="neirong.html">资本之王的财富观</a><span>05-15</span></li>
+            <li><i>▪&nbsp;</i><a href="neirong.html">华尔街债券教父的投资箴言</a><span>05-15</span></li>
+          </ul>
+		</div>
+		</div>
+		<script type="text/javascript">
+$(document).ready(function(){
+        $("#scrollDiv").textSlider({line:1,speed:500,timer:3000});
+});
+</script>
+        </li>
+        <li class="menu2_weather">
+          <iframe height="20" frameborder="0" width="235" scrolling="no" allowtransparency="true" src="http://m.weather.com.cn/m/pn3/weather.htm?id=101110101T" style="top:1px;" id="onweather"></iframe>
+        </li>
+      </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">机构职能</a>|</li>
+          <li><a href="neirong.html">领导班子</a>|</li>
+          <li><a href="neirong.html">机构设置</a>|</li>
+          <li><a href="neirong.html">直属单位</a>|</li>
+          <li><a href="neirong.html">联系我们</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">交通新闻</a>|</li>
+          <li><a href="neirong.html">工作动态</a>|</li>
+          <li><a href="neirong.html">通知公告</a>|</li>
+          <li><a href="neirong.html">便民提醒</a>|</li>
+          <li><a href="neirong.html">执法信息</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">信息公开指南</a>|</li>
+          <li><a href="neirong.html">领导之窗</a>|</li>
+          <li><a href="neirong.html">信息公开目录</a>|</li>
+          <li><a href="neirong.html">依申请信息公开</a>|</li>
+          <li><a href="neirong.html">信息公开年报</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">图片频道</a>|</li>
+          <li><a href="neirong.html">视频频道</a>|</li>
+          <li><a href="neirong.html">下载频道</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">公路法规</a>|</li>
+          <li><a href="neirong.html">道路法规</a>|</li>
+          <li><a href="neirong.html">水路法规</a>|</li>
+          <li><a href="neirong.html">工程建设管理</a>|</li>
+          <li><a href="neirong.html">综合法规</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">办事流程</a>|</li>
+          <li><a href="neirong.html">在线申报</a>|</li>
+          <li><a href="neirong.html">办事结果</a>|</li>
+          <li><a href="neirong.html">表格下载</a>|</li>
+          <li><a href="neirong.html">常见问题</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">综合监管</a>|</li>
+          <li><a href="neirong.html">土地交易</a>|</li>
+          <li><a href="neirong.html">中标公示</a>|</li>
+          <li><a href="neirong.html">工程合同备案</a>|</li>
+          <li><a href="neirong.html">设计审批</a>|</li>
+          <li><a href="neirong.html">质量监督手续</a>|</li>
+          <li><a href="neirong.html">开工安全审查</a>|</li>
+          <li><a href="neirong.html">施工许可</a>|</li>
+        </ol>
+        <ol class="menu2">
+          <li><a href="neirong.html">领导信箱</a>|</li>
+          <li><a href="neirong.html">公众咨询</a>|</li>
+          <li><a href="neirong.html">用户留言</a>|</li>
+          <li><a href="neirong.html">民意征集</a>|</li>
+          <li><a href="neirong.html">在线访谈</a>|</li>
+        </ol>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="box1">
+    <div class="b1_left">
+      <div class="b1_l_left">
+        <h3>图片新闻</h3>
+        <div class="focusBox">
+          <ul class="pic" style="position: relative; width: 320px;height: 240px;">
+            <li style="position: absolute; width: 320px; left: 0px; top:0px; display: none;"> <a href="neirong.html" target="_blank"><img src="images/box1_lb1.jpg"  /></a> </li>
+            <li style="position: absolute; width: 320px;left: 0px; top: 0px; display: none;"> <a href="neirong.html" target="_blank"><img src="images/box1_lb2.jpg" /></a> </li>
+            <li style="position: absolute; width: 320px;left: 0px; top: 0px; display: list-item;"> <a href="neirong.html" target="_blank"><img src="images/box1_lb3.jpg" /></a> </li>
+          </ul>
+          <div class="txt-bg"></div>
+          <div class="txt">
+            <ul>
+              <li><a href="neirong.html">2011全国住房城乡建设领域节能减排专项监督检查组莅临我市督查</a></li>
+              <li><a href="neirong.html">地铁9号线张贵庄站起建</a></li>
+              <li><a href="neirong.html">港集疏运交通体系规划编制完成</a></li>
+            </ul>
+          </div>
+          <ul class="num">
+            <li><span></span><a>1</a></li>
+            <li><span></span><a>2</a></li>
+            <li class="on"><span></span><a>3</a></li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",startFun:function(i){jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-34});}});
+</script> 
+      </div>
+      <div class="b1_l_right">
+        <ol class="b1_l_tit">
+          <li class="b1_xxk_on"><b>政务要闻</b></li>
+          <li><b>工作动态</b></li>
+          <li><b>区县动态</b></li>
+          <li><b>领导活动</b></li>
+        </ol>
+        <div class="b_l_cont b1_l_cont">
+          <ul class="block_none block_on">
+            <li>
+              <p>国有建设用地使用权网上挂牌公告</p>
+            </li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+            <li><a href="neirong.html">史立荣：中兴通讯三十而立</a><span>[2015-5-15]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[2014-9-03]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽查</a><span>[2014-9-03]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2014-9-03]</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="b1_right">
+      <h3>通知公告</h3>
+      <div class="b_l_cont">
+        <ul>
+          <li><a href="neirong.html">集团年终贺岁晚会隆重举行</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">集团年终贺岁晚会隆重举行</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">集团年终贺岁晚会隆重举行</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">集团年终贺岁晚会隆重举行</a><span>[05-15]</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="box2" > <a href="neirong.html"><img src="images/box2_tu.jpg" width="990" height="74" /></a> </div>
+  <div class="clear"></div>
+  <div class="box3">
+    <div class="box3_l">
+      <h3><span class="box3_lh_l">政务公开</span>
+        <div class="box3_lh_r"><a href="neirong.html">领导之窗</a>|<a href="neirong.html">机构职能</a>|<a href="neirong.html">信息公开目录</a>|<a href="neirong.html">依法申请公开</a></div>
+      </h3>
+      <div class="box3_lc_l">
+        <ul class="box3_lcl_ul">
+          <li><a href="neirong.html">政府信息公开指南</a></li>
+          <li><a href="neirong.html">政府信息公开制度</a></li>
+          <li><a href="neirong.html">政府信信息公开年报</a></li>
+          <li><a href="neirong.html">政府信息公开目录</a></li>
+          <li><a href="neirong.html">信息公开意见箱</a></li>
+          <li><a href="neirong.html">依申请公开</a></li>
+        </ul>
+        <ol class="box3_lcl_ol">
+          <li><a href="neirong.html">政策法规</a></li>
+          <li><a href="neirong.html">重要会议</a></li>
+          <li><a href="neirong.html">考试信息</a></li>
+          <li><a href="neirong.html">单位招录</a></li>
+          <li><a href="neirong.html">招标采购</a></li>
+          <li><a href="neirong.html">工作部署</a></li>
+          <li><a href="neirong.html">监督检查</a></li>
+          <li><a href="neirong.html">人事信息</a></li>
+          <li><a href="neirong.html">规划计划</a></li>
+          <li><a href="neirong.html">行政收费</a></li>
+          <li><a href="neirong.html">应急管理</a></li>
+          <li><a href="neirong.html">信息年报</a></li>
+        </ol>
+        <div class="box3_lcl_div"> <a href="neirong.html">政府信息公开搜索</a> <a href="neirong.html">整站全文信息搜索</a> </div>
+      </div>
+      
+      <div class="box3_lc_r">
+        <div class="box3_lcr_tit">
+          <ul class="box3_xxk1">
+            <li class="box3_lt_on"> 政策法规</li>
+            <li>政府文件</li>
+            <li>年报数据</li>
+          </ul>
+        </div>
+        <div class="b_l_cont b3_l_cont1">
+          <ul class="block_none block_on">
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-16]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-16]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-16]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-16]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-17]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-17]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-17]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-17]</span></li>
+          </ul>
+        </div>
+        <div class="box3_lcr_tit">
+          <ul class="box3_xxk2">
+            <li class="box3_lt_on"> 政策法规</li>
+            <li>政府文件</li>
+            <li>年报数据</li>
+          </ul>
+        </div>
+        <div class="b_l_cont b3_l_cont2">
+          <ul class="block_none block_on">
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[2015-05-15]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[2015-05-15]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-15]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[2015-05-15]</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box3_r">
+      <h3>领导班子</h3>
+      <ul class="box3_r_u1">
+        <li><img src="images/box8_tu1.jpg" width="120" height="90" /><b><a href="neirong.html">史立荣:中兴通讯三十而立</a></b>
+          <p>未来四五年是通讯企业的考验期；4G时代，<a href="neirong.html">[详细]</a></p>
+        </li>
+        <li><img src="images/box8_tu2.jpg" width="120" height="90" /><b><a href="neirong.html">李开复归来(续):小创新渐成</a></b>
+          <p>传统行业每一项都会被移动互联网所影响<a href="neirong.html">[详细]</a></p>
+        </li>
+      </ul>
+      <p class="box3_r_t2"><b>机构设置</b></p>
+      <ul class="box3_r_u2">
+        <li class="box3_r_u2_l"><a href="neirong.html">机构职能</a></li>
+        <li class="box3_r_u2_r"><a href="neirong.html">领导班子</a></li>
+        <li class="box3_r_u2_l"><a href="neirong.html">下属机构</a></li>
+        <li class="box3_r_u2_r"><a href="neirong.html">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="box4"> <a href="neirong.html"><img src="images/box4_img.jpg" width="990" height="70" /></a> </div>
+  <div class="clear"></div>
+  <div class="box5">
+    <div class="box3_l box5_l">
+      <h3><span class="box3_lh_l">互动交流</span>
+        <div class="box3_lh_r"> <a href="neirong.html">服务清单</a>| <a href="neirong.html">网上申报</a>| <a href="neirong.html">查询汇总</a>| <a href="neirong.html">服务网点</a>| <a href="neirong.html">下载服务</a> </div>
+      </h3>
+      <div class="box3_lc_l">
+        <p class="box3_r_t2 box5_ll_tit"><b>办事栏目</b><a href="neirong.html">更多>></a></p>
+        <ul class="box3_r_u2 box5_ll_ul1">
+          <li><a href="neirong.html">劳动保障监察</a></li>
+          <li><a href="neirong.html">居民养老保险</a></li>
+          <li><a href="neirong.html">居民医疗保险</a></li>
+          <li><a href="neirong.html">就业技能培训</a></li>
+        </ul>
+        <p class="box3_r_t2 box5_ll_tit2"><b>最新事件</b></p>
+        <ol class="box5_r_ol">
+          <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">资本之王的财富观</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[05-15]</span></li>
+          <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[09-03]</span></li>
+        </ol>
+      </div>
+      <div class="box3_lc_r box5_lc_r">
+        <div class="box5_lcr_tit">
+          <ul class="box5_xxk">
+            <li class="box5_lt_on"> 办事清单</li>
+            <li>下载服务</li>
+            <li>查询总汇</li>
+            <li>常见问题</li>
+          </ul>
+        </div>
+        <div class="b5_l_cont">
+          <ul class="block_none block_on">
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">资本之王的财富观</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">华尔街债券教父的投资箴言</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">北京市示范应用新能源小客车自用充电设施</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">信息公开指南</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">信息公开指南</a><span>[09-03]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市属高校三年规划建设项目开展专项稽察</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>[05-15]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+          </ul>
+          <ul class="block_none">
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[05-15]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">本市获批信息惠民国家试点城市</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+            <li><a href="neirong.html">市发展改革委对我市污水处理和再生稽查</a><span>[09-03]</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box3_r box5_l">
+      <h3>快速导航</h3>
+      <p class="box5_r_c"> <a href="neirong.html"><img src="images/box5_r1.jpg" width="230" height="59" /></a> <a href="neirong.html"><img src="images/box5_r2.jpg" width="230" height="59" /></a> <a href="neirong.html"><img src="images/box5_r3.jpg" width="230" height="59" /></a> <a href="neirong.html"><img src="images/box5_r4.jpg" width="230" height="59" /></a> </p>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="box6"> <a href="neirong.html"><img src="images/box6_img.jpg" width="990" height="69" /></a> </div>
+  <div class="clear"></div>
+  <div class="box7">
+    <div class="box3_l box7_l">
+      <h3> <span class="box3_lh_l">网上办事</span>
+        <div class="box3_lh_r"> <a href="neirong.html">服务清单</a>| <a href="neirong.html">网上申报</a>| <a href="neirong.html">查询汇总</a>| <a href="neirong.html">服务网点</a>| <a href="neirong.html">下载服务</a> </div>
+      </h3>
+      <div class="box3_lc_l box7_lc_l">
+        <ul class="box5_ll_ul1 box7_lh_r">
+          <li><a href="neirong.html">劳动保障监察</a></li>
+          <li><a href="neirong.html">居民养老保险</a></li>
+          <li><a href="neirong.html">居民医疗保险</a></li>
+          <li><a href="neirong.html">就业技能培训</a></li>
+        </ul>
+        <div class="box7_zxft">
+          <p class="box7_zxft_tit"><b>在线访谈</b></p>
+          <ul class="box7_zxft_ul">
+            <li class="box7_zxft_ull"><a href="neirong.html"><img src="images/box7_zaixian_ft.jpg" width="106" height="117" /></a><a href="neirong.html">人物访谈</a></li>
+            <li class="box7_zxft_ulr">
+              <p>访谈时间:</p>
+              <p class="box7_zu_p1"><a href="neirong.html">2013-01-08</a></p>
+              <p>访谈嘉宾:</p>
+              <p class="box7_zu_p1"><a href="neirong.html">刘先生</a></p>
+              <p>访谈形式:</p>
+              <p class="box7_zu_p1">全程视频直播</p>
+              <p class="box7_zu_p1"><a href="neirong.html">[留言]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="neirong.html">[视频]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="neirong.html">[直播室]</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="box3_lc_r">
+        <div class="box7_lcr_tit">
+          <ul class="box7_xxk">
+            <li class="box7_lt_on"> 办事清单</li>
+            <li>下载服务</li>
+            <li>查询总汇</li>
+            <li>常见问题</li>
+          </ul>
+        </div>
+        <div class="b7_l_cont">
+          <table class="block_none block_on" cellpadding="0" cellspacing="0">
+            <tr height="28">
+              <td width="144"><b>&nbsp;&nbsp;标题</b></td>
+              <td width="39"><b>类型</b></td>
+              <td width="99" align="center"><b>来信日期</b></td>
+              <td width="90" align="center"><b>办理状态</b></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">我们家的大黄狗被马云吃掉了</a></td>
+              <td>建议</td>
+              <td align="center">2015-06-17</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+          </table>
+          <table class="block_none" cellpadding="0" cellspacing="0">
+            <tr height="28">
+              <td width="144"><b>&nbsp;&nbsp;标题</b></td>
+              <td width="39"><b>类型</b></td>
+              <td width="99" align="center"><b>来信日期</b></td>
+              <td width="90" align="center"><b>办理状态</b></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">关于樱花广场“摆设摊点”的感想和想法</a></td>
+              <td>曝光</td>
+              <td align="center">2014-12-14</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+          </table>
+          <table class="block_none" cellpadding="0" cellspacing="0">
+            <tr height="28">
+              <td width="144"><b>&nbsp;&nbsp;标题</b></td>
+              <td width="39"><b>类型</b></td>
+              <td width="99" align="center"><b>来信日期</b></td>
+              <td width="90" align="center"><b>办理状态</b></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">违法违规建筑要拆除</a></td>
+              <td>咨询</td>
+              <td align="center">2014-11-25</td>
+              <td align="center"><i>＝未受理</i></td>
+            </tr>
+          </table>
+          <table class="block_none" cellpadding="0" cellspacing="0">
+            <tr height="28">
+              <td width="144"><b>&nbsp;&nbsp;标题</b></td>
+              <td width="39"><b>类型</b></td>
+              <td width="99" align="center"><b>来信日期</b></td>
+              <td width="90" align="center"><b>办理状态</b></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+            <tr height="25">
+              <td><a href="neirong.html">雾霾好严重</a></td>
+              <td>咨询</td>
+              <td align="center">2015-09-05</td>
+              <td align="center"><i>＝已受理</i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="box3_r box7_l">
+      <h3>意见征集</h3>
+      <ul class="box7_ru1">
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+      </ul>
+      <p class="box3_r_t2"><b>机构设置</b></p>
+      <ul class="box7_ru1">
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+        <li><a href="neirong.html">新生大学报到 家长大军随行</a><span>[进行中]</span></li>
+      </ul>
+      </p>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="box8">
+  	<ul class="box8_ul">
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu1.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">史立荣:中兴通讯三十而立</a>
+  		</li>
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu2.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">李开复归来(续)</a>
+  		</li>
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu3.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">政府方案视频演示</a>
+  		</li>
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu4.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">资本之王的财富观</a>
+  		</li>
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu5.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">华尔街债券教父的投资箴</a>
+  		</li>
+  		<li>
+  			<a href="neirong.html"><img src="images/box8_tu6.jpg" width="132" height="96" /></a>
+  			<a href="neirong.html">小创新渐成大玩意儿</a>
+  		</li>
+  	</ul>
+  </div>
+  <div class="clear"></div>
+  <div class="links">
+  	<ul class="links_ul">
+  		<li>
+  			<select name="select" onchange="javascript:if (this.options[this.selectedIndex].value != &#39;&#39;) window.open(this.options[this.selectedIndex].value);this.options[0].selected;">
+	  			<option value="" selected="selected">==市委部门网站==</option>
+	  			<option value="#">市委办公室</option>
+	  			<option value="#">市委组织部</option>
+	  			<option value="#">市委宣传部</option>
+	  			<option value="#">市统一战线工作部</option>
+	  			<option value="#">市委政法委员会</option>
+	  			<option value="#">市社会工作委员会</option>
+  			</select>
+		</li>
+		<li>
+			<select name="select2" onchange="javascript:if (this.options[this.selectedIndex].value != &#39;&#39;) window.open(this.options[this.selectedIndex].value);this.options[0].selected;"> 
+				<option value="" selected="selected">==政府部门网站==</option>
+				<option value="#">人民政府办公室</option>
+				<option value="#">发展和改革局</option>
+				<option value="#">经济和信息化局</option>
+				<option value="#">教育局</option>
+				<option value="#">科学技术局</option>
+				<option value="#">民族宗教事务局</option>
+				<option value="#">公安局</option>
+				<option value="#">监察局</option>
+				<option value="#">民政局</option>
+				<option value="#">司法局</option>
+				<option value="#">财政局</option>
+				<option value="#">环境保护局</option>
+				<option value="#">国土资源和城乡规划局</option>
+				<option value="#">安监局</option>
+				<option value="#">水务局</option>
+				<option value="#">文化体育局</option>
+				<option value="#">安全生产监督管理局</option>
+				<option value="#">统计局</option>
+				<option value="#">审计局</option>
+				<option value="#">卫生局</option>
+				<option value="#">人社局</option>
+				<option value="#">农牧局</option>
+				<option value="#">交通运输局</option>
+				<option value="#">民政局</option>
+			</select>
+		</li>
+  		<li>
+  			<select name="select3" onchange="javascript:if (this.options[this.selectedIndex].value != &#39;&#39;) window.open(this.options[this.selectedIndex].value);this.options[0].selected;">
+				<option value="" selected="selected">==事业单位网站==</option>
+				<option value="#">档案局</option>
+				<option value="#">住房公积金管理中心</option>
+				<option value="#">公共资源交易中心</option>
+			</select>
+		</li>
+  		<li>
+  			<select name="select4" onchange="javascript:if (this.options[this.selectedIndex].value != &#39;&#39;) window.open(this.options[this.selectedIndex].value);this.options[0].selected;"> 
+				<option value="" selected="selected">==人民团体网站==</option>
+				<option value="#">总工会</option>
+				<option value="#">团委</option>
+				<option value="#">妇联 </option>
+				<option value="#">红十字会</option>
+				<option value="#">工商联</option>
+				<option value="#">科协</option>
+				<option value="#">侨联</option>
+				<option value="#">社科联</option>
+				<option value="#">贸促会</option>
+			</select>
+		</li>
+		<li>
+			<select name="select5" onchange="javascript:if (this.options[this.selectedIndex].value != &#39;&#39;) window.open(this.options[this.selectedIndex].value);this.options[0].selected;"> 
+				<option value="" selected="selected">=中央和省垂直部门=</option>
+				<option value="http://www.gov.cn/">中华人民共和国</option>
+				<option value="#">省门户网站</option>
+			</select>
+		</li>
+  	</ul>
+  </div>
+  <div class="clear"></div>
+  <div class="footer">
+  	<div class="footer_d2">
+  		<div class="footer_d3">
+  			<a href="neirong.html">网站声明</a><span>|</span><a href="neirong.html">网站管理</a><span>|</span><a href="neirong.html">网站帮助</a><span>|</span><a href="neirong.html">联系我们</a>
+  		</div>
+  	</div>
+  </div>
+  <div class="clear"></div>
+  <div class="copyright">
+  	<p>邮箱:lvcaodi@hotmail.com QQ：484820878、507570355 电话：15229275458<br />主办单位：国微人力资源和社会保障局<br />Powered by： ligang</p>
+  </div>
+</div>
+</body>
+</html>

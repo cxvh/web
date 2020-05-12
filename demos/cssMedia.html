@@ -1,0 +1,13 @@
+<script>
+CSS.customMedia.set('--foo', 5);
+</script>
+<style>
+@media (_foo: 5) {
+    body{background: red}
+    }
+@media (_foo < 10) {body{background: blue}}
+@media (_foo > 10) {body{background-color: aqua}}
+</style>
+<body>
+    111111111111111
+</body>

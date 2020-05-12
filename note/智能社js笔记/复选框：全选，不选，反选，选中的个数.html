@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框：全选，不选，反选，选中的个数</title>
+<script>
+window.onload = function (){
+	var oDiv1 = document.getElementById("div1");
+	var oDiv2 = document.getElementById("div2");
+	var oDiv3 = document.getElementById("div3");
+
+	var oDiv4 = document.getElementById("div4");
+
+	var box = document.getElementById("box");
+	var inpCheck = box.getElementsByTagName("input");
+
+	// 全选
+	oDiv1.onclick = function()
+	{
+		for(var i = 0; i < inpCheck.length; i++)
+		{
+			inpCheck[i].checked = true;
+		};
+	};
+
+	// 不选
+	oDiv2.onclick = function()
+	{
+		for(var i = 0; i < inpCheck.length; i++)
+		{
+			inpCheck[i].checked = false;
+		};
+	};
+
+	// 反选
+	oDiv3.onclick = function()
+	{
+		for(var i = 0; i < inpCheck.length; i++)
+		{
+			if(inpCheck[i].checked == true){
+
+				inpCheck[i].checked = false;
+
+			}else{
+
+				inpCheck[i].checked = true;
+
+			}
+		};
+	};
+
+	// 选中个数
+	oDiv4.onclick = function()
+	{
+		var num=0;
+
+		for(var i = 0; i < inpCheck.length; i++)
+		{
+			if(inpCheck[i].checked == true){
+
+				num++;
+			}
+		};
+		if(num == 0){
+
+			alert("一个也没选。");
+
+		}else if(num == inpCheck.length){
+
+			alert("全选。选中了"+num+"个。");
+
+		}else{
+
+			alert("选中了："+num+"个。");
+
+		}
+		num=0;
+	};
+};
+</script>
+</head>
+<body>
+<input id="div1" type="button" value="全选">
+<input id="div2" type="button" value="不选">
+<input id="div3" type="button" value="反选">
+<input id="div4" type="button" value="选中的个数">
+<div id="box">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+	<input type="checkbox">
+</div>
+</body>
+</html>

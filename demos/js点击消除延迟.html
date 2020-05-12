@@ -1,0 +1,69 @@
+<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+<ol>
+    <li>111</li>
+    <li>aaa</li>
+    <li>ewrewr</li>
+    <li>23423423</li>
+    <li>啊啊啊啊啊啊啊啊啊</li>
+</ol>
+<hr>
+<p>6666</p>
+<p>321312</p>
+<p>123213</p>
+<p>4324</p>
+<p>4234</p>
+<p>234234</p>
+<p>23423423</p>
+<div id="content1">
+    
+</div>
+<div id="content2">
+    
+</div>
+<style>
+    .pressed{background-color: aqua}
+	p:active{background-color:aqua;}
+</style>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script>
+function attachEvent(obj,cb){
+    //msMaxTouchPoints ie  判断设备触碰点数
+    var isTouchDevice="ontouchstart" in window || navigator.msMaxTouchPoints || navigator.MaxTouchPoints;
+    if(isTouchDevice){
+        $(obj).bind('touchstart',function(e){
+            $(this).data('touchon',true)
+            $(this).addClass('pressed')
+        });
+        $(obj).bind('touchmove',function(e){
+            $(this).data('touchon',false)
+            $(this).removeClass('pressed')
+        });
+        $(obj).bind('touchend',function(e){
+            if($(this).data('touchon')){
+                cb.bind(this)();
+            }
+            $(this).data('touchon',true)
+            $(this).removeClass('pressed')
+        });
+    }else{
+        $(obj).bind('mousedown',function(){
+            $(this).data('touchon',true)
+            $(this).addClass('pressed')
+        })
+        $(obj).bind('mouseup',function(e){
+            $(this).data('touchon',false)
+            $(this).removeClass('pressed')
+            cb.bind(this)();
+        });
+    }
+}
+$.fn.bindtouch = function(cb) {
+	attachEvent($(this), cb);
+};
+$('li').click(function(){
+    $('#content2').text('click时间戳：'+Date.now())
+});
+$('li').bindtouch(function(){
+    $('#content1').text('touch时间戳：'+Date.now())
+});
+</script>

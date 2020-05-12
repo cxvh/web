@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+<style>
+*{padding: 0;margin: 0;list-style: none;}
+#div1{width: 290px;margin:30px auto 0 auto;background-color: #ccc;padding-bottom: 10px;}
+ul{width:270px;height:360px;padding: 10px;}
+li{
+	float: left;
+	width: 70px;
+	height: 70px;
+	font-size: 20px;
+	line-height: 70px;
+	margin:10px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
+li.active{
+	font-weight: bold;
+	font-size: 22px;
+	background-color: red;
+}
+#div1 div{
+	margin: 0 18px;
+	padding: 5px 10px;
+	border: 1px solid black;
+	background-color: white;
+}
+#div1 div h2{
+	line-height: 1.5em;
+}
+#div1 div p{
+	line-height: 1.5em;
+	padding: 5px 0;
+}
+</style>
+<script>
+window.onload=function()
+{
+	var arr=[
+		"快过年了，大家可以商量着去哪玩吧~",
+		"二月去哪玩",
+		"三月去哪玩",
+		"四月去哪玩",
+		"五月去哪玩",
+		"六月去哪玩",
+		"七月去哪玩",
+		"八月去哪玩",
+		"九月去哪玩",
+		"十月去哪玩",
+		"十一月去哪玩",
+		"十二月去哪玩"
+	];
+
+	var oDiv=document.getElementById("div1");
+	var oLi=oDiv.getElementsByTagName("li");
+	var oTxe=oDiv.getElementsByTagName("div")[0];
+
+	for(var i=0;i<oLi.length;i++)
+	{
+		oLi[i].index=i;
+		oLi[i].onmouseover=function()
+		{
+			for(var i=0;i<oLi.length;i++)
+			{
+				oLi[i].className="";
+			}
+			this.className="active";
+
+			oTxe.innerHTML="<h2>"+(this.index+1)+"月活动</h2><p>"+arr[this.index]+"</p>"
+		}
+	}
+}
+</script>
+</head>
+<body>
+<div id="div1">
+	<ul>
+		<li class="active">一月</li>
+		<li>二月</li>
+		<li>三月</li>
+		<li>四月</li>
+		<li>五月</li>
+		<li>六月</li>
+		<li>七月</li>
+		<li>八月</li>
+		<li>九月</li>
+		<li>十月</li>
+		<li>十一月</li>
+		<li>十二月</li>
+	</ul>
+	<div>
+		<h2>1月活动</h2>
+		<p>快过年了，大家可以商量着去哪玩吧~</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 操作应用--文档碎片</title>
+<style>
+a{font-size: 18px;color: blue;text-decoration: underline;}
+a:hover{color: orange;}
+a:active{color:yellow;}
+a:visited{color:red;}
+ul,li{margin-left:50px;padding-left: 100px;}
+</style>	
+<script>
+window.onload=function()
+{
+	/** 
+		文档碎片-->createDocumentFragment() 
+		创建大量标签使用文档碎片时，有提升性能的好处
+		*如果创建少量及几个标签使用文档碎片，不仅不提升浏览器性能，反而还会降级浏览器性能；
+		所以慎用！*
+	**/
+
+	var oBtn1=document.getElementById("btn1");
+	var oBtn2=document.getElementById("btn2");
+	var obj=document.getElementById("ol");
+	// 普通的插入标签
+	oBtn1.onclick=function()
+	{
+		for(var i=0;i<10000;i++)
+		{
+			var oLi=document.createElement("li");
+			obj.appendChild(oLi);
+		}
+	}
+	// 文档碎片插入标签
+	var oFrag=document.createDocumentFragment();
+	oBtn2.onclick=function()
+	{
+		for(var i=0;i<10000;i++)
+		{
+			var oLi=document.createElement("li");
+			oFrag.appendChild(oLi);
+		}
+		obj.appendChild(oFrag);
+	}
+};
+</script>
+</head>
+<body>
+<input type="button" value="普通方法创建li" id="btn1">
+<input type="button" value="文档碎片创建li" id="btn2">
+<hr />
+<ol id="ol">
+</ol>
+<hr />
+</body>
+</html>

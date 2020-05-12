@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画封装</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+/*
+var oDiv = document.getElementById("div1");
+function move(ele,attr,target){
+    // left-->offsetLeft,top-->offsetTop,width-->offsetWidth,height-->offsetHeight
+    attr=attr.toLowerCase();
+    var strOffset='offset'+attr.substr(0,1).toUpperCase()+attr.substring(1).toLowerCase();
+
+    window.clearTimeout(ele.timer);
+    var nSpeed = (target-ele[strOffset])/40;
+    nSpeed=nSpeed>0?Math.ceil(nSpeed):Math.floor(nSpeed);
+    ele.style[attr]=ele[strOffset]+nSpeed+"px";
+
+    if(nSpeed){
+        ele.timer=window.setTimeout(function(){move(ele,attr,target);},0)
+    }
+}
+oDiv.onclick=function(){move(this,'top',650);}
+*/ // ---> 简单的运动-->下面是升级版
+var oDiv = document.getElementById("div1");
+
+function core(ele,attr,target){
+    attr=attr.toLowerCase();
+    var strOffset='offset'+attr.substr(0,1).toUpperCase()+attr.substring(1).toLowerCase();
+
+    var nSpeed = (target-ele[strOffset])/40;
+    nSpeed=nSpeed>0?Math.ceil(nSpeed):Math.floor(nSpeed);
+    ele.style[attr]=ele[strOffset]+nSpeed+"px";
+
+    return nSpeed;
+}
+function move(ele,obj){
+    window.clearTimeout(ele.timer);
+    var flag=0;
+    for(var attr in obj){
+        flag += core(ele,attr,obj[attr]);
+    }
+    if(flag){
+        ele.timer=window.setTimeout(function(){move(ele,obj);},0);
+    }
+}
+// height,width,top,left
+var obj={height:300,left:100,width:800,top:200};
+oDiv.onclick=function(){move(this,obj);}
+</script>
+</body>
+</html>

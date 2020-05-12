@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 基础</title>
+<style>
+#div1{
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+	margin: 100px;
+}
+#div2{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+.div3{border:5px solid black;position: fixed;top:10px;right: 10px;padding: 50px;}
+</style>
+<script>
+window.onload=function()
+{
+	// 操纵元素属性
+	// 获取：getAttribute(名称)
+	// 设置：setAttribute（名称，值）
+	// 删除：removeAttribute（名称）
+	var obj=document.getElementById("div2");
+	var div=document.getElementById("div");
+	// alert(obj.getAttribute("id"));		// div2
+	obj.setAttribute("class","div3");
+	// alert(obj.getAttribute("class"));	// div3
+
+	obj.onclick=function()
+	{
+		div.removeAttribute("class");	// <div id="div">123456</div> class="div3"彻底消失
+	}
+
+	/****** className获取元素 ******/
+	var oOl=document.getElementById("ol");
+	var aLi=oOl.getElementsByTagName("li");
+
+	for(var i=0;i<aLi.length;i++)
+	{
+		if(aLi[i].className == "li1")
+		{
+			aLi[i].style.backgroundColor="orange";
+		};
+	};
+};
+</script>
+</head>
+<body>
+<div id="div1">
+	<div id="div2"></div>
+</div>
+<div id="div" class="div3">123456</div>
+<ol id="ol">
+	<li></li>
+	<li class="li1"></li>
+	<li class="li1"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li class="li1"></li>
+	<li></li>
+	<li></li>
+	<li class="li1"></li>
+</ol>
+</body>
+</html>

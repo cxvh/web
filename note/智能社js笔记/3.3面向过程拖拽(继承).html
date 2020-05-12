@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽</title>
+<style>
+div{
+	width: 200px;
+	height: 200px;
+	opacity: .8;
+	background-color: yellow;
+	position: absolute;
+}
+#div2{
+	background-color: red;
+}
+</style>
+<script src="./js/3.3.js"></script>
+<script src="./js/3.3.LimitDrag.js"></script>
+<script>
+window.onload=function(){
+	new Drag("div1");
+
+	new LimitDrag("div2");
+};
+</script>
+</head>
+<body>
+<div id="div1">普通拖拽1</div>
+<div id="div2">普通拖拽2</div>
+</body>
+</html>

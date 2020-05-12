@@ -1,0 +1,43 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<textarea placeholder="在线翻译(汉-&gt;英)" onkeyup="fy(this.value)"></textarea>
+<hr />
+<textarea readonly="readonly" id="b"></textarea>
+<style>
+textarea{width:100%;height:30%;}
+</style>
+<script>
+function fy(v){
+	if(!v||v.length==0){
+		return;
+	}
+	$.ajax({
+		url:"/ttranslatev3",
+		method:"post",
+		dataType:"json",
+		data:{
+			fromLang:'auto-detect',
+			text: v,
+			to: 'en'
+		}
+	}).then(function(res){
+		$('#b').val(res[0].translations[0].text)
+	}).catch(function(err){
+		console.log(err)
+	});
+}
+/*
+server {
+	listen       80;
+	server_name  localhost 127.0.0.1;
+	charset utf-8;
+	location / {
+		root E:/site/;
+		index  index.html index.htm;
+	}
+	location /ttranslatev3 {
+	    proxy_set_header X-Forwarded-For $remote_addr;
+		proxy_pass http://cn.bing.com;
+	}
+}
+*/
+</script>

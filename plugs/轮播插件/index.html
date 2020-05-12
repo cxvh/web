@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏轮播插件</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        html,body{
+            height:100%;
+            overflow: hidden;
+        }
+        #container,.sections,.section{
+            width: 100%;
+            height: 100%;
+        }
+        .sections{
+            position: relative;
+        }
+        .section{
+            background-size: cover;
+            background-position: 50% 50%;
+            text-align: center;
+            color: white;
+        }
+        .section:nth-child(1){
+            background-color: #CC901B;
+            background-image: url("img/tu1.jpg");
+        }
+        .section:nth-child(2){
+            background-color: #998661;
+            background-image: url("img/tu2.jpg");
+        }
+        .section:nth-child(3){
+            background-color: #1BCC73;
+            background-image: url("img/tu3.jpg");
+        }
+        .section:nth-child(4){
+            background-color: #FF8A3B;
+            background-image: url("img/tu4.jpg");
+        }
+        .pages{
+            position: fixed;
+            width: 200px;
+            height: 30px;
+            bottom:70px;
+            left: 50%;
+        }
+        .pages ul{
+            position: relative;
+            transform: translateX(-50%);
+        }
+        .pages li{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: white;
+            border:2px solid orange;
+            float: left;
+            list-style: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .pages li.active{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="container" data-PageSwitch> <!-- data-PageSwitch 这种调用默认的效果 -->
+    <div class="sections">
+        <div class="section"><h3>this is the page</h3></div>
+        <div class="section"><h3>this is the page</h3></div>
+        <div class="section"><h3>this is the page</h3></div>
+        <div class="section"><h3>this is the page</h3></div>
+    </div>
+</div>
+<!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script src="js/jquery-1.9.1-min.js"></script>
+<script src="js/pageswitch.min.js"></script>
+<script>
+//    以下调用方法值可以传参数
+
+//    $("#container").PageSwitch({
+//        selectors : {       // 获取轮播的 html 结构
+//            sections : ".sections", // ul 获取
+//            section : ".section",   // li 获取
+//            page : ".pages",        // 分页 class名称
+//            active : ".active"      // 分页符选中 class名称
+//        },
+//        index : 0,          // 开始索引值
+//        easing : "ease",    // CSS3 动画效果
+//        // easing 的值有
+//        /*
+//         linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+//         ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+//         ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+//         ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+//         ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+//         cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+//         */
+//        duration : 500,     // 动画执行完一次的时间
+//        loop : false,       // 是否循环
+//        pagination : true,  // 是否进行分页处理
+//        keyboard : true,    // 表示是否触发键盘事件
+//        direction : "horizontal", // 动画方向 有两个属性 第一个 vertical（竖屏滑动） 第二个 horizontal（横屏滑动）
+//        callback : ""       // 回调函数
+//    });
+</script>
+</body>
+</html>

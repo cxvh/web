@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM className获取元素</title>
+<script>
+function getByClass(oParent, sClass)	// 插件封装
+{
+	var aResult=[];
+	var aEle=oParent.getElementsByTagName("*");
+
+	for(var i=0;i<aEle.length;i++)
+	{
+		if(aEle[i].className==sClass)
+		{
+			aResult.push(aEle[i]);
+		};
+	};
+	return aResult;
+};
+window.onload=function()
+{
+	/****** className获取元素 ******/
+	var oOl=document.getElementById("ol");
+
+	var aLi=getByClass(oOl, "li1");
+
+	for(var i=0;i<aLi.length;i++)
+	{
+		aLi[i].style.backgroundColor="orange";
+	};
+};
+</script>
+</head>
+<body>
+<ol id="ol">
+	<li></li>
+	<li class="li1"></li>
+	<li class="li1"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li class="li1"></li>
+	<li></li>
+	<li></li>
+	<li class="li1"></li>
+</ol>
+</body>
+</html>

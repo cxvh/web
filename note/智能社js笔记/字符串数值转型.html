@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js常见变量</title>
+<script>
+var a="-12.5px";
+alert(isNaN(a));		// 判断不是一个数，true
+var b=parseInt(a);		// 整型
+alert(b); // -12
+var c=parseFloat(a);	// 浮点数转换
+alert(c); // -12.5
+var d=Math.abs(c);		// 取绝对值
+alert(d); // 12
+
+// 隐式转换
+var a=5;
+var b="5";
+
+alert(a==b);	// true		先转换类型，然后比较
+alert(a===b);	// false	不转换类型，直接比较
+
+var a="12";
+var b="5";
+
+alert(a+b);		// 125
+alert(a-b);		// 7
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<script type="text/javascript">
+    var speedTestImagesPath = "/Content/images/speedTest";
+    var website = 'https://qq.com|,https://baidu.com|,';
+    var autourl = website.split(',');
+    var start = 0;
+    var several = 0;
+    var faking = false;
+
+    $(document).ready(function () {
+        var html = '';
+        for (var i = 0; i < autourl.length; i++) {
+            if (autourl[i] != "" && i < 6) {
+                html += '<li id="speed' + i + '">'
+                     + '<div class="clearfix s-top">'
+                     + '<div class="fl"><div>登录地址' + (i + 1) + '</div>'
+                     + '<div id="txt' + i + '" class="bnum">载入中</div>'
+                     + '<div id="sptxt' + i + '"></div>'
+                     + '</div>'
+                     + '<div class="fr"><button id="click_url_' + i + '">访问</button></div>'
+                     + '</div>'
+                     + '<div class="speedbar"></div>'
+                     + '</li>';
+            }
+        }
+        $('#webListBox').html(html);
+        testurl(true);
+    });
+
+    function linkTime(item, total) {
+        if (total > 4000) {
+            $("#txt" + item).html("超时");
+            $("#speed" + item).removeClass();
+        } else {
+            var timetotal = Math.floor(total / 10);
+            timetotal = timetotal == 0 ? 1 : timetotal;
+            $("#speed" + item).removeClass();
+            $("#txt" + item).html('<span class="num">' + timetotal + '</span>ms');
+            if (timetotal <= 50) {
+                $("#speed" + item).addClass('fast');
+                $("#sptxt" + item).text('极速');
+            }
+            else if (timetotal <= 100) {
+                $("#speed" + item).addClass('soso');
+                $("#sptxt" + item).text('顺畅');
+            }
+            else {
+                $("#speed" + item).addClass('slow');
+                $("#sptxt" + item).text('拥挤');
+            }
+        }
+    }
+
+    function checkURL() {
+        var checkURL = $("#checkURL").val();
+        if (checkURL != "" && checkURL != null) {
+            $.ajax({
+                type: "POST",
+                url: "/Account/CheckDomainName",
+                data: { checkURL: checkURL, __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val() }
+            })
+            .done(function (data) {
+                var msg = "";
+                if (data.checkState) {
+                    msg = '<span class="text-green">此域名为正确域名可安心访问</span>';
+                }
+                else {
+                    msg = '<span class="text-red">此域名为假域名请勿访问</span>';
+                }
+                $("#VerifyResult").html(msg);
+            })
+            .fail(function () {
+                $("#VerifyResult").html("伺服器错误，请重新尝试!!");
+            });
+        }
+        else {
+            $("#VerifyResult").html("域名侦测无输入，请确认后再检测!");
+        }
+    }
+
+    function checkAlert(messageText) {
+        $("#alert").fadeIn(300);
+        $("#alert").find('.alert-close').click(ac);
+        $("#alertMsg").html(messageText);
+        $("#ok").click(ac);
+        var t = setTimeout(ac, 3000);
+        function ac() {
+            clearTimeout(t);
+            $("#alert").fadeOut(300);
+        }
+    }
+
+    function clearurl() {
+        for (var i = 0; i < autourl.length; i++) {
+            $("#txt" + i).html("载入中");
+            $("#speed" + i).removeClass();
+            $("#sptxt" + i).text('');
+        }
+        urlList = "";
+        testurl();
+    }
+</script>

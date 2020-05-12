@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>百度一下 你就知道</title>
+<style>
+body{padding:0;margin:0;}
+ol,li{padding:0;margin:0;list-style:none;}
+div{
+	width:450px;
+	height:34px;
+	background:red;
+	margin:260px auto 0 auto;
+	position:relative;
+}
+#logo{
+	display:block;
+	margin:auto;
+	position:relative;
+	top:-155px;
+	left:-11px;
+	width:300px;
+}
+#inp,#bd{
+	border-width:1px;
+	padding:0;
+	position:absolute;
+	top:0;
+}
+#inp{
+	width:320px;
+	height:32px;
+	font-size:16px;
+	line-height:30px;
+	padding:0 23px 0 5px;
+	left:0;
+	z-index:1;
+	border-color:#cccccc;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+#inp:hover{border-color:#B3B3B3;}
+#inp:focus{border-color:;}
+#bd{
+	width: 100px;
+    height: 34px;
+	font-size:14px;
+	line-height:34px;
+    color: white;
+    letter-spacing: 1px;
+    background: #3385ff;
+	border:0;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+	cursor:pointer;
+	right:0;
+	z-index:3;
+}
+#bd:hover{
+	box-shadow:1px 1px 1px #ccc;
+}
+#del{
+	display:none;
+	width:22px;
+	height:32px;
+	position:absolute;
+	left:327px;
+	top:1px;
+	z-index:2;
+	background:url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/quickdelete_9c14b01a.png) no-repeat center 11px;
+	cursor:pointer;
+}
+#del:hover{background-position:center -23px;}
+
+
+#ol{
+	background:white;
+	border:1px solid #ccc;
+	position:absolute;
+	top:34px;
+	width:348px;
+	display:none;
+	overflow:hidden;
+}
+#ol li{
+	font-size:14px;
+	line-height:22px;
+	padding:0 5px;
+	cursor:default;
+	background-color:#ffffff;
+}
+#ol li a{color:black;text-decoration:none;}
+#ol li.active{
+	background-color:#F0F0F0;
+	font-weight:700;
+}
+</style>
+</head>
+<body>
+<div>
+	<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" id="logo" />
+	<input type="text" value="" id="inp" />
+	<span id="del"></span>
+	<input type="button" value="百度一下" id="bd" />
+	<ol id="ol">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$("#inp").val();
+
+var lsStr;
+var len;
+
+var openLi=false;
+var openTxt;
+
+var openBd=false;
+var openDel=false;
+
+var hrf="http://www.baidu.com/s?wd=";
+
+$("#inp").keyup(function(ev){
+	if((ev.keyCode==38) || (ev.keyCode==40)){
+		var valText=lsStr;
+	}else{
+		var valText=$(this).val();
+	}
+	$.ajax({
+		type:"GET",
+		url:"http://suggestion.baidu.com/su?wd="+valText+"&cb=MrChow",
+		dataType:"jsonp",
+		jsonp:"callback",
+		jsonpCallback:"MrChow",
+		success:function(data){
+			var str;			
+			if($("#inp").val()==""){
+				$("#ol").hide();
+				$("#del").hide();
+				return;
+			}
+			
+			$("#del").show();
+			
+			if(ev.keyCode==13) {	
+				window.location.href=hrf+$("#inp").val();
+				return;
+			}
+			if(!!data.s.length){
+				$("p").html(ev.keyCode);
+				$("#ol").show();
+				if(ev.keyCode==38){
+					for(var i=0;i<len;i++){
+					
+						var libgColor=$("#ol li").eq(i).css("background-color");
+						
+						if(($("#ol li").get(i).className != "active")&&(i==len-1)){
+							$("#inp").val($("#ol li").eq(len-1).text());
+							$("#ol li").eq(len-1).addClass("active").siblings().removeClass("avtive");
+							return;
+						}
+						if(libgColor == "rgb(240, 240, 240)"){
+							i--;
+							if(i < 0){
+								$("#inp").val(lsStr);
+								$("#ol li").removeClass("active");
+								return;
+							}
+							$("#inp").val($("#ol li").eq(i).text());
+							$("#ol li").eq(i).addClass("active").siblings().removeClass("active");
+							return;
+						}
+					}
+					return;
+				}
+				
+				if(ev.keyCode==40){
+					for(var i=0;i<len;i++){
+					
+						var libgColor=$("#ol li").eq(i).css("background-color");
+						
+						if(($("#ol li").get(i).className != "active")&&(i==len-1)){
+							$("#inp").val($("#ol li").eq(0).text());
+							$("#ol li").eq(0).addClass("active").siblings().removeClass("avtive");
+							return;
+						}						
+						if(libgColor == "rgb(240, 240, 240)"){
+							i++;
+							if(i >= len){
+								$("#inp").val(lsStr);
+								$("#ol li").removeClass("active");
+								return;
+							}
+							$("#inp").val($("#ol li").eq(i).text());
+							$("#ol li").eq(i).addClass("active").siblings().removeClass("active");
+							return;
+						}
+					}
+					return;
+				}
+				
+				$("#ol li").removeClass("active").find("a").remove();
+				
+				len=data.s.length;
+				$("#ol").css({"height":22*len+"px"});
+				for(var i=0;i<len;i++){
+					str='<a>'+data.s[i]+'</a>';
+					$("#ol li").eq(i).html(str);
+				}
+				
+				lsStr=$("#inp").val();
+				
+			}else{
+				$("#ol").hide();
+			}
+		}
+	});	
+});
+
+
+$("#del").hover(function(){
+	openDel = true;
+},function(){
+	openDel = false;
+});
+$("#del").click(function(){
+	$("#inp").focus().val("");
+	$(this).hide();
+});
+
+$("#bd").hover(function(){
+	openBd = true;
+},function(){
+	openBd = false;
+});
+$("#bd").click(function(){
+	if(!!$("#inp").val()){
+		window.location.href=hrf+$("#inp").val();
+	}else {
+		return false;
+	}
+});
+$("#ol li").hover(function(){
+	openLi = true;
+	openTxt = $(this).text();
+	$(this).addClass("active").siblings().removeClass("active");
+},function(){
+	openLi = false;
+});
+
+$("#inp").focus(function(){
+	if($(this).val() != ""){
+		$("#del").show();
+	}
+});
+
+$("#inp").blur(function(){
+	$("#ol").hide(0,function(){
+		if(!!openLi){
+			$("#inp").val(openTxt);
+			window.location.href=hrf+openTxt;
+			return;
+		}else if(!!openDel){
+			$("#inp").focus();
+			$("#inp").val("");
+			$("#ol li").find("a").remove();
+			$("#ol").hide();
+			$("#del").hide();
+			lsStr="";
+			return;
+		}else if(!!openBd){
+			window.location.href=hrf+$("#inp").val();
+			return;
+		}else if($("#inp").val()==""){
+			$("#del").hide();
+			$("#ol li").removeClass("active");
+			return;
+		}else{
+			$("#inp").val(lsStr);
+		}
+	});
+});
+</script>
+</body>
+</html>

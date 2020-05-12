@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>国微政府网</title>
+    <!--引入css-->
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <link href="css/xinwen.css" rel="stylesheet" type="text/css">
+    <!--引入js-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="js/zx.js"></script>
+</head>
+
+<body>
+    <!--容器居中-->
+    <div class="containers">
+        <div class="header">
+            <ul class="header_l">
+                <li><a href="neirong.html">中华人民共和国人社部</a></li>
+                <li><a href="neirong.html">省人社厅</a></li>
+                <li><a href="neirong.html">市政府网站</a></li>
+            </ul>
+            <div class="header_r"> <a href="javascript:void(0);" onclick="SetHome(this,'http://www.2010100.com');">设为首页</a> <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a> </div>
+        </div>
+        <div class="clear"></div>
+        <div class="logo">
+            <embed src="flash/logo.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1005" height="190"></embed>
+        </div>
+        <div class="clear"></div>
+        <div class="nav">
+            <ul class="menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="zuzhijg.html">组织机构</a></li>
+                <li><a href="xinwengg.html">新闻公告</a></li>
+                <li><a href="xinxigk.html">信息公开</a></li>
+                <li><a href="video_pic.html">视频图片</a></li>
+                <li><a href="zhengcefg.html">政策法规</a></li>
+                <li><a href="banshizn.html">办事指南</a></li>
+                <li><a href="xinxixt.html">信息系统</a></li>
+                <li><a href="lingdaoxx.html">政民互动</a></li>
+                <li class="nav_search">
+                    <form action="#" target="_blank" method="get" name="form1" id="form1">
+                        <input type="text" value="" class="nav_search_text">
+                        <input type="submit" value="搜  索" class="nav_search_sub">
+                    </form>
+                </li>
+            </ul>
+            <div class="menu2bg">
+                <ol class="menu2_ul_block1">
+                    <li class="menu2_date">
+                        <script type="text/javascript">
+                            print(today.getFullYear() + "年" + mon + "月" + today.getDate() + "日&nbsp;&nbsp;&nbsp;" + d[today.getDay() + 1]);
+                        </script>
+                    </li>
+                    <li class="menu2_gdxw">
+                        <b>>>&nbsp;&nbsp;&nbsp;滚动新闻</b>
+                        <div id="scrollDiv">
+                            <div class="scrollText">
+                                <ul>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">资本之王的财富观</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">华尔街债券教父的投资箴言</a><span>05-15</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $("#scrollDiv").textSlider({
+                                    line: 1,
+                                    speed: 500,
+                                    timer: 3000
+                                });
+                            });
+                        </script>
+                    </li>
+                    <li class="menu2_weather">
+                        <iframe height="20" frameborder="0" width="235" scrolling="no" allowtransparency="true" src="http://m.weather.com.cn/m/pn3/weather.htm?id=101110101T" style="top:1px;" id="onweather"></iframe>
+                    </li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">机构职能</a>|</li>
+                    <li><a href="neirong.html">领导班子</a>|</li>
+                    <li><a href="neirong.html">机构设置</a>|</li>
+                    <li><a href="neirong.html">直属单位</a>|</li>
+                    <li><a href="neirong.html">联系我们</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">交通新闻</a>|</li>
+                    <li><a href="neirong.html">工作动态</a>|</li>
+                    <li><a href="neirong.html">通知公告</a>|</li>
+                    <li><a href="neirong.html">便民提醒</a>|</li>
+                    <li><a href="neirong.html">执法信息</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">信息公开指南</a>|</li>
+                    <li><a href="neirong.html">领导之窗</a>|</li>
+                    <li><a href="neirong.html">信息公开目录</a>|</li>
+                    <li><a href="neirong.html">依申请信息公开</a>|</li>
+                    <li><a href="neirong.html">信息公开年报</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">图片频道</a>|</li>
+                    <li><a href="neirong.html">视频频道</a>|</li>
+                    <li><a href="neirong.html">下载频道</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">公路法规</a>|</li>
+                    <li><a href="neirong.html">道路法规</a>|</li>
+                    <li><a href="neirong.html">水路法规</a>|</li>
+                    <li><a href="neirong.html">工程建设管理</a>|</li>
+                    <li><a href="neirong.html">综合法规</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">办事流程</a>|</li>
+                    <li><a href="neirong.html">在线申报</a>|</li>
+                    <li><a href="neirong.html">办事结果</a>|</li>
+                    <li><a href="neirong.html">表格下载</a>|</li>
+                    <li><a href="neirong.html">常见问题</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">综合监管</a>|</li>
+                    <li><a href="neirong.html">土地交易</a>|</li>
+                    <li><a href="neirong.html">中标公示</a>|</li>
+                    <li><a href="neirong.html">工程合同备案</a>|</li>
+                    <li><a href="neirong.html">设计审批</a>|</li>
+                    <li><a href="neirong.html">质量监督手续</a>|</li>
+                    <li><a href="neirong.html">开工安全审查</a>|</li>
+                    <li><a href="neirong.html">施工许可</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">领导信箱</a>|</li>
+                    <li><a href="neirong.html">公众咨询</a>|</li>
+                    <li><a href="neirong.html">用户留言</a>|</li>
+                    <li><a href="neirong.html">民意征集</a>|</li>
+                    <li><a href="neirong.html">在线访谈</a>|</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="mbx">
+            <span>您的位置</span><a href="index.html">首页</a><span>>></span><a href="xinxixt.html">招标项目审查</a>
+        </div>
+        <div class="clear"></div>
+        <div class="list_cont">
+            <div class="list_left">
+                <div class="list_left_nav">
+                    <h3 class="list_left_tit1"><a href="neirong.html">机构查询</a></h3>
+                    <ul class="list7_left_ul">
+                        <li><a href="neirong.html">招标项目审查</a></li>
+                        <li><a href="neirong.html">政府公开采购查询</a></li>
+                        <li><a href="neirong.html">政府供应商公示</a></li>
+                        <li><a href="neirong.html">中标信息公示</a></li>
+                        <li><a href="neirong.html">初步设计审批</a></li>
+                        <li><a href="neirong.html">工程合同备案</a></li>
+                        <li><a href="neirong.html">开工安全条件审查</a></li>
+                        <li><a href="neirong.html">质量监督手续</a></li>
+                        <li><a href="neirong.html">施工许可</a></li>
+                    </ul>
+                </div>
+                <div style="height:10px;"></div>
+                <div class="list_left_nav">
+                    <h3 class="list_left_tit1"><b>通知公告</b></h3>
+                    <ul class="list_cont_list list_cont_list_left_ul">
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                    </ul>
+                </div>
+                <div style="height:10px;"></div>
+                <div class="list_left_nav">
+                    <h3 class="list_left_tit1"><b>最新内容</b></h3>
+                    <ul class="list_cont_list list_cont_list_left_ul">
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                        <li><a href="neirong.html" class="list_rightc_l_a">北京市示范应用新能源小客车自用充电设施</a><span class="list_rightc_l_s">[09-03]</span></li>
+                    </ul>
+                </div>
+                <p class="xwlist_left_tu1">
+                    <a href="neirong.html"><img src="images/xw_left_img1.jpg" width="100%" height="74" /></a>
+                </p>
+                <p class="xwlist_left_tu1">
+                    <a href="neirong.html"><img src="images/xw_left_img2.jpg" width="100%" height="74" /></a>
+                </p>
+            </div>
+            <div class="list_right2">
+                <form action="#" method="get">
+                    <ul class="list7_right_ul">
+                        <li class="list7_r_ul_li1"><b>备案号:</b>
+                            <input type="text" />
+                        </li>
+                        <li class="list7_r_ul_li1"><b>项目名称:</b>
+                            <input type="text" />
+                        </li>
+                        <li class="list7_r_ul_li1"><b>建设单位:</b>
+                            <input type="text" />
+                        </li>
+                        <li class="list7_r_ul_li2">
+                            <input type="submit" />
+                        </li>
+                        <li class="list7_r_ul_li3">|
+                            <input type="button" value="发布" onclick="javascript:window.location.href='#'" />
+                        </li>
+                    </ul>
+                </form>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="list7_r_table">
+                    <tr>
+                        <td width="105" height="23" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td1">备案号</td>
+                        <td width="105" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td2">项目名称</td>
+                        <td width="105" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td3">建设单位</td>
+                        <td width="105" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td4">招标金额</td>
+                        <td width="105" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td5">招标方式</td>
+                        <td width="105" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td6">备案时间</td>
+                        <td width="106" align="center" valign="middle" bgcolor="#E7F1F8" class="list7_right_c_td7">详情</td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle"><b>监12010</b></td>
+                        <td align="center" valign="middle">温州生态园东岸垟公园二标段工程</td>
+                        <td align="center" valign="middle">温州生态园管理委员会</td>
+                        <td align="center" valign="middle">1700万元</td>
+                        <td align="center" valign="middle">公开招标</td>
+                        <td align="center" valign="middle">2012-02-12</td>
+                        <td align="center" valign="middle"><a href="neirong.html">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle"><b>设12002</b></td>
+                        <td align="center" valign="middle">浙江第一高级技工学校设计</td>
+                        <td align="center" valign="middle">浙江第一高级技工学校</td>
+                        <td align="center" valign="middle">3200万元</td>
+                        <td align="center" valign="middle">公开招标</td>
+                        <td align="center" valign="middle">2012-03-21</td>
+                        <td align="center" valign="middle"><a href="neirong.html">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle"><b>监12028</b></td>
+                        <td align="center" valign="middle">温州市南塘街B地块智能化工程</td>
+                        <td align="center" valign="middle">温州市安居房开发有限公司</td>
+                        <td align="center" valign="middle">490万元</td>
+                        <td align="center" valign="middle">公开招标</td>
+                        <td align="center" valign="middle">2012-03-20</td>
+                        <td align="center" valign="middle"><a href="neirong.html">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle"><b>监12004</b></td>
+                        <td align="center" valign="middle">张小川</td>
+                        <td align="center" valign="middle">公安局</td>
+                        <td align="center" valign="middle">200万元</td>
+                        <td align="center" valign="middle">公开招标</td>
+                        <td align="center" valign="middle">2012-03-23</td>
+                        <td align="center" valign="middle"><a href="neirong.html">查看</a></td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+                <ul class="list2_fy">
+                    <li class="list2_fy_tj"><span>10条</span></li>
+                    <li class="list2_fy_tj"><span><input type="text" class="list_fy_input" value="1" readonly/>/<input type="text" class="list_fy_input" value="1" readonly />页</span></li>
+                    <li><a href="neirong.html">首页</a></li>
+                    <li>
+                        <a href="neirong.html">
+                            &gt;&gt;</a>
+                    </li>
+                    <li><a href="neirong.html">上一页</a></li>
+                    <li><a href="neirong.html" class="list_active">1</a></li>
+                    <li><a href="neirong.html">下一页</a></li>
+                    <li><a href="neirong.html">>></a></li>
+                    <li><a href="neirong.html">末页</a></li>
+                    <li>
+                        <input type="text" value="1" class="list_search" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+            <div class="footer_d2">
+                <div class="footer_d3">
+                    <a href="neirong.html">网站声明</a><span>|</span><a href="neirong.html">网站管理</a><span>|</span><a href="neirong.html">网站帮助</a><span>|</span><a href="neirong.html">联系我们</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="copyright">
+            <p>邮箱:lvcaodi@hotmail.com QQ：484820878、507570355 电话：15229275458
+                <br />主办单位：国微人力资源和社会保障局
+                <br />Powered by： ligang</p>
+        </div>
+    </div>
+</body>
+
+</html>

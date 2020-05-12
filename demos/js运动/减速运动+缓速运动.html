@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓速运动</title>
+    <style>
+        *{padding: 0;margin:0;}
+        ul,li{list-style: none;}
+        #outer{
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        #inner{
+            width: 500%;
+            height:100%;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        #inner div{
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+        ul{
+            width: 320px;
+            height:50px;
+            margin:5px auto;
+        }
+        li{
+            width: 16%;
+            height: 100%;
+            margin: 0 2%;
+            background-color: brown;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            float: left;
+            cursor: pointer;
+        }
+        h2{
+            text-align: center;
+            padding:5px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+        <div style="background-color: antiquewhite;"><img src="img/tu1.jpg" width="100%" /></div>
+        <div style="background-color: aquamarine;"><img src="img/tu2.jpg" width="100%" /></div>
+        <div style="background-color: cornsilk;"><img src="img/tu3.jpg" width="100%" /></div>
+        <div style="background-color: tomato;"><img src="img/tu4.jpg" width="100%" /></div>
+        <div style="background-color: yellowgreen;"><img src="img/tu5.jpg" width="100%" /></div>
+    </div>
+</div>
+<h2>减速滑动</h2>
+<ul id="btn1"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>
+<h2>匀速滑动</h2>
+<ul id="btn2"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>
+<script>
+    /*
+     减速运动原理
+     0---1000
+     1000
+     (1000-100)/10
+     90
+     (1000-190)/10
+     81
+     (1000-190-81)/10
+     72.9
+     (1000-190-81-72.9)/10
+     65.61
+     (1000-190-81-72.9-65.61)/10
+     59.049
+     .
+     .
+     .
+     0
+     */
+
+    var oLis1=document.getElementById("btn1").getElementsByTagName("li");   // 减速运动 按钮
+    var oLis2=document.getElementById("btn2").getElementsByTagName("li");   // 缓速运动 按钮
+    var oDiv=document.getElementById("outer");      // 最外围 DIV
+    var oInner=document.getElementById("inner");    // 滑动的 DIV
+
+    var divWid=1;   // 自定义宽度 默认 100%;
+
+    var times=50;       // 自定义速度
+
+    var open=true;      // 缓速运动 开关
+
+    function divWidth(){
+        var oDivWid=Math.round(oDiv.parentNode.clientWidth*divWid);
+        oDiv.style.width=oDivWid+"px";
+    }
+    divWidth();
+    window.onresize=function(){
+        divWidth();
+    }
+
+    for(var i=0;i<oLis1.length;i++){
+        oLis1.item(i).nIndex=i;
+        oLis1.item(i).onmouseover=function(){
+            buffer(oInner,this.nIndex);
+        }
+    }
+    // 减速运动1
+    function buffer(ele,i){
+        var target=i*-oDiv.clientWidth;
+        window.clearTimeout(ele.timer);
+        var nSpeed = (target-ele.offsetLeft)/times;
+        var nSpeed = nSpeed > 0 ? Math.ceil(nSpeed) : Math.floor(nSpeed);
+        var nSpeed=(ele.offsetLeft+nSpeed)/oDiv.clientWidth*100;
+
+        ele.style.left=nSpeed+"%";
+
+        if(ele.offsetLeft!=target){
+            ele.timer=window.setTimeout(function(){buffer(ele,i);},0);
+        }
+    }
+
+    // 减速运动2
+    /*
+    function buffer(ele,i){
+        var target=-i*oDiv.clientWidth;
+        window.clearTimeout(ele.timer);
+
+        var speed = (target-ele.offsetLeft)/8;
+        console.log(target,ele.offsetLeft,target-ele.offsetLeft,speed);
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        console.log(target - ele.offsetLeft);
+        if (Math.abs(target - ele.offsetLeft) <= speed) { // 由于在停止的时候最后会出现小的缝隙，或者说没有完全的到达指定地点，所以要小于它的速度
+            ele.style.left = target + 'px';            // 在停止后填充缝隙。
+        }else {
+            ele.timer=window.setTimeout(function(){move(ele,i);},30);
+        }
+        ele.style.left=ele.offsetLeft + speed +"px";
+
+    }
+    */
+
+
+    // 匀速运动
+
+
+    for(var i=0;i<oLis2.length;i++){
+        oLis2.item(i).nIndex=i;
+        oLis2.item(i).onmouseover=function(){
+            open=true
+            move(oInner,this.nIndex);
+        }
+    }
+    function move(ele,i) {
+
+        var target = -i * oDiv.clientWidth;
+        var nSpeed;
+        window.clearTimeout(ele.timer);
+        // -10 小于 -5
+        if(target < ele.offsetLeft){
+            nSpeed = ele.offsetLeft-oDiv.clientWidth/times;
+            if(nSpeed <= target){
+                open=false;
+            }
+        }else{
+            nSpeed = ele.offsetLeft+oDiv.clientWidth/times;
+            if(nSpeed >= target){
+                open=false;
+            }
+        }
+        nSpeed = (nSpeed/oDiv.clientWidth)*100;
+        ele.style.left=nSpeed+"%";
+        if(open==true){
+            ele.timer=window.setTimeout(function(){move(ele,i);},0);
+        }else{
+            ele.style.left=-i*100+"%";
+        }
+    }
+</script>
+</body>
+</html>

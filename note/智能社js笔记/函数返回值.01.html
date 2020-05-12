@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数返回值</title>
+</head>
+<body>
+<script>
+window.onload=function()
+{
+	function gdCan(a,b,c)	// 固定参
+	{
+		return a+b+c;
+	};
+	alert(gdCan(5,6,7));
+
+	function kbCan()		// 可变参(arguments实现)
+	{
+		var result=0;
+		for(var i=0;i<arguments.length;i++)
+		{
+			result+=arguments[i];
+		};
+		return result;
+	};
+	alert(kbCan(1,2,3,4,5,6,7,8,9));
+};
+</script>
+</body>
+</html>

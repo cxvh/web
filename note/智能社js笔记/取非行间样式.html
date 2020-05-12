@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>取非行间样式</title>
+<style>
+#div1{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	background-color: red;
+}
+</style>
+</head>
+<body>
+<script>
+function getStyle(obj,name)
+{	
+	if(obj.currentStyle)
+	{
+		// IE
+		return obj.currentStyle[name];
+	}
+	else
+	{
+		// FF
+		return getComputedStyle(obj, "什么都可以放置,如true，false，123，sdad等等。")[name];
+	};
+};
+window.onload=function()
+{
+	var oDiv = document.getElementById("div1");
+	alert(getStyle(oDiv,"backgroundColor"));
+};
+</script>
+<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 基础</title>
+<style>
+#div1{
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+	margin: 100px;
+}
+#div2{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+</style>
+<script>
+window.onload=function()
+{
+/* 3.1.使用 offsetParent 获取position: absolute;相对应的position: relative;父节点 */
+	var oDiv1=document.getElementById("div1");
+	var oDiv2=document.getElementById("div2");
+	
+	// alert(oDiv2.offsetParent);	// 相对父节点是 body
+
+	/****** 给 div1 添加 position: relative;******/
+	// oDiv1.style.position="relative";
+	// alert(oDiv2.offsetParent);		// 相对父节点是 div
+/***************************************************************************/
+
+
+/****** 4.1 首尾 *子*节点，兄弟 节点 获取(有兼容性问题) ******/
+// firstChild		firstElementChild
+// lastChild		lastElementChild
+
+// nextSibling		nextElementSibling
+// previousSibling	previousElementSibling
+	var oOl=document.getElementById("ol");
+	var oLi=document.getElementsByTagName("li");
+	var oLi5=document.getElementById("li5");
+
+	// 兼容，获取首尾子节点
+	if(oOl.firstElementChild)
+	{
+		oOl.firstElementChild.style.backgroundColor="orange";
+	}
+	else{
+		oOl.firstChild.style.backgroundColor="orange";
+	}
+	if(oOl.lastElementChild)
+	{
+		oOl.lastElementChild.style.backgroundColor="yellow";
+	}
+	else{
+		oOl.lastChild.style.backgroundColor="yellow";
+	}
+	// 兼容，获取兄弟节点
+	if(oLi5.nextElementSibling) // 下一个
+	{
+		oLi5.nextElementSibling.style.backgroundColor="red";
+	}
+	else{
+		oLi5.nextSibling.style.backgroundColor="red";
+	}
+	if(oLi5.previousElementSibling) // 上一个
+	{
+		oLi5.previousElementSibling.style.backgroundColor="pink";
+	}
+	else{
+		oLi5.previousSibling.style.backgroundColor="pink";
+	}
+};
+</script>
+</head>
+<body>
+<div id="div1">
+	<div id="div2"></div>
+</div>
+<ol id="ol">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li id="li5"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+</body>
+</html>

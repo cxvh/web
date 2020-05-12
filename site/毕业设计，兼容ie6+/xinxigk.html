@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>国微政府网</title>
+    <!--引入css-->
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <link href="css/xinwen.css" rel="stylesheet" type="text/css">
+    <!--引入js-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="js/zx.js"></script>
+</head>
+
+<body>
+    <!--容器居中-->
+    <div class="containers">
+        <div class="header">
+            <ul class="header_l">
+                <li><a href="neirong.html">中华人民共和国人社部</a></li>
+                <li><a href="neirong.html">省人社厅</a></li>
+                <li><a href="neirong.html">市政府网站</a></li>
+            </ul>
+            <div class="header_r"> <a href="javascript:void(0);" onclick="SetHome(this,'http://www.2010100.com');">设为首页</a> <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a> </div>
+        </div>
+        <div class="clear"></div>
+        <div class="logo">
+            <embed src="flash/logo.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1005" height="190"></embed>
+        </div>
+        <div class="clear"></div>
+        <div class="nav">
+            <ul class="menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="zuzhijg.html">组织机构</a></li>
+                <li><a href="xinwengg.html">新闻公告</a></li>
+                <li><a href="xinxigk.html">信息公开</a></li>
+                <li><a href="video_pic.html">视频图片</a></li>
+                <li><a href="zhengcefg.html">政策法规</a></li>
+                <li><a href="banshizn.html">办事指南</a></li>
+                <li><a href="xinxixt.html">信息系统</a></li>
+                <li><a href="lingdaoxx.html">政民互动</a></li>
+                <li class="nav_search">
+                    <form action="#" target="_blank" method="get" name="form1" id="form1">
+                        <input type="text" value="" class="nav_search_text">
+                        <input type="submit" value="搜  索" class="nav_search_sub">
+                    </form>
+                </li>
+            </ul>
+            <div class="menu2bg">
+                <ol class="menu2_ul_block1">
+                    <li class="menu2_date">
+                        <script type="text/javascript">
+                            print(today.getFullYear() + "年" + mon + "月" + today.getDate() + "日&nbsp;&nbsp;&nbsp;" + d[today.getDay() + 1]);
+                        </script>
+                    </li>
+                    <li class="menu2_gdxw"> <b>>>&nbsp;&nbsp;&nbsp;滚动新闻</b>
+                        <div id="scrollDiv">
+                            <div class="scrollText">
+                                <ul>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">史立荣:中兴通讯三十而立</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">李开复归来(续):小创新渐成大玩意儿</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">资本之王的财富观</a><span>05-15</span></li>
+                                    <li><i>▪&nbsp;</i><a href="neirong.html">华尔街债券教父的投资箴言</a><span>05-15</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $("#scrollDiv").textSlider({
+                                    line: 1,
+                                    speed: 500,
+                                    timer: 3000
+                                });
+                            });
+                        </script>
+                    </li>
+                    <li class="menu2_weather">
+                        <iframe height="20" frameborder="0" width="235" scrolling="no" allowtransparency="true" src="http://m.weather.com.cn/m/pn3/weather.htm?id=101110101T" style="top:1px;" id="onweather"></iframe>
+                    </li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">机构职能</a>|</li>
+                    <li><a href="neirong.html">领导班子</a>|</li>
+                    <li><a href="neirong.html">机构设置</a>|</li>
+                    <li><a href="neirong.html">直属单位</a>|</li>
+                    <li><a href="neirong.html">联系我们</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">交通新闻</a>|</li>
+                    <li><a href="neirong.html">工作动态</a>|</li>
+                    <li><a href="neirong.html">通知公告</a>|</li>
+                    <li><a href="neirong.html">便民提醒</a>|</li>
+                    <li><a href="neirong.html">执法信息</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">信息公开指南</a>|</li>
+                    <li><a href="neirong.html">领导之窗</a>|</li>
+                    <li><a href="neirong.html">信息公开目录</a>|</li>
+                    <li><a href="neirong.html">依申请信息公开</a>|</li>
+                    <li><a href="neirong.html">信息公开年报</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">图片频道</a>|</li>
+                    <li><a href="neirong.html">视频频道</a>|</li>
+                    <li><a href="neirong.html">下载频道</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">公路法规</a>|</li>
+                    <li><a href="neirong.html">道路法规</a>|</li>
+                    <li><a href="neirong.html">水路法规</a>|</li>
+                    <li><a href="neirong.html">工程建设管理</a>|</li>
+                    <li><a href="neirong.html">综合法规</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">办事流程</a>|</li>
+                    <li><a href="neirong.html">在线申报</a>|</li>
+                    <li><a href="neirong.html">办事结果</a>|</li>
+                    <li><a href="neirong.html">表格下载</a>|</li>
+                    <li><a href="neirong.html">常见问题</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">综合监管</a>|</li>
+                    <li><a href="neirong.html">土地交易</a>|</li>
+                    <li><a href="neirong.html">中标公示</a>|</li>
+                    <li><a href="neirong.html">工程合同备案</a>|</li>
+                    <li><a href="neirong.html">设计审批</a>|</li>
+                    <li><a href="neirong.html">质量监督手续</a>|</li>
+                    <li><a href="neirong.html">开工安全审查</a>|</li>
+                    <li><a href="neirong.html">施工许可</a>|</li>
+                </ol>
+                <ol class="menu2">
+                    <li><a href="neirong.html">领导信箱</a>|</li>
+                    <li><a href="neirong.html">公众咨询</a>|</li>
+                    <li><a href="neirong.html">用户留言</a>|</li>
+                    <li><a href="neirong.html">民意征集</a>|</li>
+                    <li><a href="neirong.html">在线访谈</a>|</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="mbx"> <span>您的位置</span><a href="index.html">首页</a><span>>></span><a href="xinxigk.html">政府信息公开</a></div>
+        <div class="clear_jg2"></div>
+        <div class="list2_tit1">
+            <form action="#" method="get">
+                <ul class="list2_tit1_ul">
+                    <li class="list2_tit1_ul_li1"><b>政务信息公开：</b></li>
+                    <li class="list2_tit1_ul_li2">
+                        <select>
+                            <option value="title">信息标题</option>
+                            <option value="no">内容文号</option>
+                        </select>
+                    </li>
+                    <li class="list2_tit1_ul_li3">
+                        <input type="text" name="keyword" value="" size="30" />
+                    </li>
+                    <li class="list2_tit1_ul_li4">
+                        <input type="submit" value="信息查询" />
+                    </li>
+                    <li class="list2_tit1_ul_li5"><b>公开信息统计<span>10</span>条</b></li>
+                </ul>
+            </form>
+        </div>
+        <div class="clear_jg2"></div>
+        <div class="list_cont">
+            <div class="list_left">
+                <div class="list_left_nav">
+                    <h3 class="list_left_tit1"><b>信息公开导航</b></h3>
+                    <div class="foldmenu">
+                        <span class="list_click">主题分类</span>
+                        <ul class="list_left_ul2 list_open">
+                            <li><a href="neirong.html">公开指南</a></li>
+                            <li><a href="neirong.html">信息公开制度</a></li>
+                            <li><a href="neirong.html">机构职能</a></li>
+                            <li><a href="neirong.html">领导班子</a></li>
+                            <li><a href="neirong.html">政府文件</a></li>
+                            <li><a href="neirong.html">公示公告</a></li>
+                            <li><a href="neirong.html">工作动态</a></li>
+                            <li><a href="neirong.html">工作部署</a></li>
+                            <li><a href="neirong.html">领导活动</a></li>
+                            <li><a href="neirong.html">招标采购</a></li>
+                            <li><a href="neirong.html">财政信息</a></li>
+                            <li><a href="neirong.html">行政收费/许可</a></li>
+                            <li><a href="neirong.html">人事信息</a></li>
+                            <li><a href="neirong.html">监督检查</a></li>
+                            <li><a href="neirong.html">政府规章</a></li>
+                            <li><a href="neirong.html">规划计划</a></li>
+                            <li><a href="neirong.html">应急管理</a></li>
+                            <li><a href="neirong.html">信息公开年报</a></li>
+                        </ul>
+                        <div class="clear_jg2"></div>
+                        <span class="list_click">机构分类</span>
+                        <ul class="list_left_ul2">
+                            <li><a href="neirong.html">广州市天河区政府</a></li>
+                            <li><a href="neirong.html">广州市越秀区政府</a></li>
+                            <li><a href="neirong.html">广州市东山区政府</a></li>
+                            <li><a href="neirong.html">广州市白云区政府</a></li>
+                            <li><a href="neirong.html">广州市黄埔区政府</a></li>
+                            <li><a href="neirong.html">广州市花都区政府</a></li>
+                            <li><a href="neirong.html">广州市海珠区政府</a></li>
+                            <li><a href="neirong.html">广州市南沙区政府</a></li>
+                            <li><a href="neirong.html">广州市荔湾区政府</a></li>
+                            <li><a href="neirong.html">广州市番禺区政府</a></li>
+                            <li><a href="neirong.html">广州市萝岗区政府</a></li>
+                        </ul>
+                        <div class="clear_jg2"></div>
+                        <span class="list_click">生命周期</span>
+                        <ul class="list_left_ul2">
+                            <li><a href="neirong.html">婴幼儿</a></li>
+                            <li><a href="neirong.html">青少年</a></li>
+                            <li><a href="neirong.html">中年</a></li>
+                            <li><a href="neirong.html">老年</a></li>
+                            <li><a href="neirong.html">其它</a></li>
+                        </ul>
+                        <div class="clear_jg2"></div>
+                        <span class="list_click">对象</span>
+                        <ul class="list_left_ul2">
+                            <li><a href="neirong.html">公共</a></li>
+                            <li><a href="neirong.html">企业</a></li>
+                            <li><a href="neirong.html">投资者</a></li>
+                            <li><a href="neirong.html">旅游者</a></li>
+                            <li><a href="neirong.html">外籍人士</a></li>
+                            <li><a href="neirong.html">三农</a></li>
+                            <li><a href="neirong.html">妇女儿童</a></li>
+                            <li><a href="neirong.html">残疾人</a></li>
+                            <li><a href="neirong.html">其它</a></li>
+                        </ul>
+                        <div class="clear_jg2"></div>
+                        <span class="list_click">格式</span>
+                        <ul class="list_left_ul2">
+                            <li><a href="neirong.html">DOC</a></li>
+                            <li><a href="neirong.html">TXT</a></li>
+                            <li><a href="neirong.html">JPG</a></li>
+                            <li><a href="neirong.html">PDF</a></li>
+                            <li><a href="neirong.html">MP3</a></li>
+                            <li><a href="neirong.html">MPEG</a></li>
+                            <li><a href="neirong.html">其它</a></li>
+                        </ul>
+                        <div class="clear_jg2"></div>
+                        <span class="list_click">体裁</span>
+                        <ul class="list_left_ul2">
+                            <li><a href="neirong.html">命令</a></li>
+                            <li><a href="neirong.html">决定</a></li>
+                            <li><a href="neirong.html">通告</a></li>
+                            <li><a href="neirong.html">通知</a></li>
+                            <li><a href="neirong.html">公告</a></li>
+                            <li><a href="neirong.html">通报</a></li>
+                            <li><a href="neirong.html">议案</a></li>
+                            <li><a href="neirong.html">报告</a></li>
+                            <li><a href="neirong.html">请示</a></li>
+                            <li><a href="neirong.html">批复</a></li>
+                            <li><a href="neirong.html">意见</a></li>
+                            <li><a href="neirong.html">会议纪要</a></li>
+                            <li><a href="neirong.html">其它</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear_jg1"></div>
+                <div class="list_left_nav">
+                    <h3 class="list_left_tit1"><b>信息公开统计</b></h3>
+                    <table width="195" border="0" cellpadding="0" cellspacing="0" class="list_left_xxcont">
+                        <tr>
+                            <td width="150" height="24" valign="middle"><b>单位名称</b></td>
+                            <td width="45" align="center" valign="middle"><b>数量</b></td>
+                        </tr>
+                        <tr>
+                            <td height="24" valign="middle">
+                                <p>1 广州市天河区政府</p>
+                            </td>
+                            <td align="center" valign="middle">4</td>
+                        </tr>
+                        <tr>
+                            <td height="24" valign="middle">
+                                <p>2 广州市天河区政府</p>
+                            </td>
+                            <td align="center" valign="middle">3</td>
+                        </tr>
+                        <tr>
+                            <td height="24" valign="middle">
+                                <p>3 广州市天河区政府</p>
+                            </td>
+                            <td align="center" valign="middle">2</td>
+                        </tr>
+                        <tr>
+                            <td height="24" valign="middle">
+                                <p>4 广州市天河区政府</p>
+                            </td>
+                            <td align="center" valign="middle">1</td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="xwlist_left_tu1">
+                    <a href="neirong.html"><img src="images/xx_left_img.jpg" width="100%" height="74" /></a>
+                </p>
+            </div>
+            <div class="list_right2">
+                <div class="list_right_c">
+                    <h3 class="list_right_tit2"> <img src="images/yindaof/list_rtit2_ydf.gif" /><b class="list_right_tit2_b">政府职能</b> </h3>
+                    <div class="list_right_cont2">
+                        <table width="705" border="0" align="center" cellpadding="0" cellspacing="1" class="list3_r_table">
+                            <tr>
+                                <td width="32" align="center" valign="middle" bgcolor="#E6E6E6"><b>序号</b></td>
+                                <td width="164" align="center" valign="middle" bgcolor="#E6E6E6"><b>索引号</b></td>
+                                <td width="330" align="center" valign="middle" bgcolor="#E6E6E6"><b>信息名称</b></td>
+                                <td width="75" align="center" valign="middle" bgcolor="#E6E6E6"><b>生成日期</b></td>
+                                <td width="96" align="center" valign="middle" bgcolor="#E6E6E6"><b>文号</b></td>
+                            </tr>
+                            <tr>
+                                <td height="20" align="center" valign="middle">1</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004568/2012-0057394</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">信息公开指南</a></td>
+                                <td align="center" valign="middle">2014-08-30</td>
+                                <td align="center" valign="middle">3453453455</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">2</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">3</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">4</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">5</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">6</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">7</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">8</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">9</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">10</td>
+                                <td align="center" valign="middle"><a href="neirong.html">003004322/2012-0052572</a></td>
+                                <td align="left" valign="middle" class="list3_r_td3"><a href="neirong.html">淮南凤台县民防办到岗集镇考察人防民防工作</a></td>
+                                <td align="center" valign="middle">2014-02-11</td>
+                                <td align="center" valign="middle">粤A1301052208</td>
+                            </tr>
+                        </table>
+                        <div class="clear"></div>
+                        <ul class="list2_fy">
+                            <li class="list2_fy_tj"><span>10条</span></li>
+                            <li class="list2_fy_tj"><span><input type="text" class="list_fy_input" value="1" readonly/>/<input type="text" class="list_fy_input" value="1" readonly />页</span></li>
+                            <li><a href="neirong.html">首页</a></li>
+                            <li>
+                                <a href="neirong.html"><<</a>
+                            </li>
+                            <li><a href="neirong.html">上一页</a></li>
+                            <li><a href="neirong.html" class="list_active">1</a></li>
+                            <li><a href="neirong.html">下一页</a></li>
+                            <li><a href="neirong.html">>></a></li>
+                            <li><a href="neirong.html">末页</a></li>
+                            <li>
+                                <input type="text" value="1" class="list_search" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+            <div class="footer_d2">
+                <div class="footer_d3"> <a href="neirong.html">网站声明</a><span>|</span><a href="neirong.html">网站管理</a><span>|</span><a href="neirong.html">网站帮助</a><span>|</span><a href="neirong.html">联系我们</a> </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="copyright">
+            <p>邮箱:lvcaodi@hotmail.com QQ：484820878、507570355 电话：15229275458
+                <br /> 主办单位：国微人力资源和社会保障局
+                <br /> Powered by： ligang</p>
+        </div>
+    </div>
+</body>
+
+</html>

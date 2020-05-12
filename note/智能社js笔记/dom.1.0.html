@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 操作应用</title>
+<style>
+a{font-size: 18px;color: blue;text-decoration: underline;}
+a:hover{color: orange;}
+a:active{color:yellow;}
+a:visited{color:red;}
+</style>	
+<script>
+window.onload=function()
+{
+	// createElement(标签名)			创建 dom 元素
+	// appendChild(子节点)				追加子节点
+	// insertBefore(子节点,在谁之前)	在原有节点前插入节点
+	// removeChild(子节点)				删除一个节点
+
+	var oBtn1=document.getElementById("btn1");
+	var oOl1=document.getElementById("ol1");
+	var oTxt1=document.getElementById("txt1");
+
+	oBtn1.onclick=function()
+	{
+		var oLi=document.createElement("li");
+		oLi.innerHTML=oTxt1.value;
+		// 父级.appengChild(创建的子节点)；
+		oOl1.appendChild(oLi);
+	}
+/*********************************************************/
+	var oBtn2=document.getElementById("btn2");
+	var oOl2=document.getElementById("ol2");
+	var oTxt2=document.getElementById("txt2");
+
+	oBtn2.onclick=function()
+	{
+		var oLi=document.createElement("li");
+		var aLi=oOl2.getElementsByTagName("li");
+		oLi.innerHTML=oTxt2.value;
+		// 父级.appengChild(创建的子节点)；
+		oOl2.appendChild(oLi);
+		if(aLi.length>0)
+		{
+			oOl2.insertBefore(oLi, aLi[0]);
+		}
+		else
+		{
+			oOl2.appendChild(oLi);
+		}
+	}
+/*********************************************************/
+	var aA=document.getElementsByTagName("a");
+	var oOl3=document.getElementById("ol3");
+
+	for(var i=0;i<aA.length;i++)
+	{
+		aA[i].onclick=function()
+		{
+			oOl3.removeChild(this.parentNode);
+		}
+	}
+};
+</script>
+</head>
+<body>
+<input type="text" name="" id="txt1">
+<input type="button" value="创建li" id="btn1">
+<ol id="ol1">
+</ol>
+<input type="text" name="" id="txt2">
+<input type="button" value="创建li" id="btn2">
+<ol id="ol2">
+</ol>
+<hr />
+<ol id="ol3">
+	<li>aaaaaa<a>删除父节点</a></li>
+	<li>bbbbbb<a>删除父节点</a></li>
+	<li>cccccc<a>删除父节点</a></li>
+	<li>dddddd<a>删除父节点</a></li>
+	<li>eeeeee<a>删除父节点</a></li>
+	<li>ffffff<a>删除父节点</a></li>
+	<li>gggggg<a>删除父节点</a></li>
+</ol>
+</body>
+</html>

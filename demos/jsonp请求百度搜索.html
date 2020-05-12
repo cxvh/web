@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{padding:0px;margin:0px;list-style: none;}
+			.box{width:500px;margin:10px auto}
+			.box div input{border:none;outline: none;border:1px solid blueviolet;font-size:18px;height:40px;}
+			.box div input:nth-of-type(1){display:block;width:395px;border-right:none;padding-left:5px;float:left}
+			.box div div{cursor:pointer;border:1px solid blueviolet;height:42px;float:left;width:97px;font-size:12px;padding:0px;background:blueviolet;color:#fff;font-size:14px;line-height:42px;text-align:center}
+			.clear{overflow: hidden;}
+			.box div div a{color:#fff;}
+			.box li{height:40px;width:395px;padding-left:5px;line-height:40px;border:1px solid blueviolet;border-top:none}
+			.box li a{color:#666}
+			a{text-decoration: none;}
+		</style>
+		
+	</head>
+	<body>
+		<div class="box">
+			<div id="baidu"class="clear">
+					<input placeholder="请输入内容">
+					<div><a target="_blank">百度一下</a></div>
+			</div>
+			<ul>
+				
+				
+			</ul>
+		</div>
+		<script>
+			function MrChow(data){
+				var str='';
+				var oUl=document.getElementsByTagName('ul')[0];
+				if(data.s.length){
+					oUl.style.display='block';
+					
+					for(var i=0;i<data.s.length;i++){
+					
+					str+='<li><a target="_blank"href=http://www.baidu.com/s?wd='+data.s[i]+'>'+data.s[i]+'</a></li>';
+				}
+				oUl.innerHTML=str;
+					
+				}else{
+					oUl.style.display='none';
+					
+				}
+				
+			}
+			window.onload=function(){
+				
+				var oUl=document.getElementsByTagName('ul')[0];
+				var aInput=document.getElementsByTagName('input')[0];
+				var oBaidu=document.getElementById('baidu');
+				var oA=oBaidu.getElementsByTagName('a')[0];
+				aInput.onkeyup=function(){
+					if(!this.value==''){
+					
+						var oScript=document.createElement('script');
+						oScript.src='http://suggestion.baidu.com/su?wd='+this.value+'&cb=MrChow';
+						document.body.appendChild(oScript);
+						
+					}else{
+						
+						oUl.style.display='none';
+					}
+					
+				}
+				oBaidu.onclick=function(){
+					
+					oA.setAttribute('href','http://www.baidu.com/s?wd='+aInput.value);
+				}
+			}
+		</script>
+		
+	</body>
+</html>

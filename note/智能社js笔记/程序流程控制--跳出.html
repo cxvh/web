@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js程序流程控制--跳出</title>
+</head>
+<body>
+<script>
+window.onload=function()
+{
+	// break	//整个循环中断
+	// continue	//本次循环中断
+
+	for(var i=0;i<5;i++)
+	{
+		if(i==2)
+		{
+			break;
+		}
+		alert(i); // 0,1
+	};
+	
+	for(var i=0;i<5;i++)
+	{
+		if(i==2)
+		{
+			continue;
+		}
+		alert(i); // 0,1,3,4
+	};
+};
+</script>
+</body>
+</html>

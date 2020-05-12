@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json和数组</title>
+</head>
+<body>
+<script>
+window.onload=function()
+{
+	var json = {a: 12, b: 5, c: 7};
+	var arr = [12, 5, 7];
+
+	// alert(json.a);
+	// alert(json["a"]);
+
+	// alert(arr[0]);
+
+	// alert(json.length); // undefined
+	// alert(arr.length);	// 3
+
+	// 循环
+	// for(var i=0;i<arr.length;i++)
+	// {
+	// 	alert("第"+i+"个是："+arr[i]);
+	// }
+	// for(var i in arr)
+	// {
+	// 	alert("第"+i+"个是："+arr[i]);
+	// }	// 上面是数组的两种循环方法
+
+	// json 只有一种
+	for(var i in json)
+	{
+		alert("第"+i+"个是："+json[i]);
+	}
+};
+</script>
+</body>
+</html>
